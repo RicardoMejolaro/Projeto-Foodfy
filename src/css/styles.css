@@ -8,21 +8,22 @@
 
 body {
   background-color: #FFF;
+  font-family: 'Roboto', sans-serif;
 }
 
 header {
   width: 100%;
-  margin-bottom: 30px;
+  margin-top: 30px;
 }
 
 div.menu {
   display: flex;
-  margin-left: 25%;
-  margin-top: 32px;
+  height: 70px;
+  margin: 0 16%;
 }
 
 div.links {  
-  margin-left: 50px;
+  margin-left: 80px;
 }
 
 div.links a {
@@ -34,4 +35,39 @@ div.links a {
 
 div.links a:hover {
   text-decoration: underline;
+}
+
+div.banner {
+  background-color: #FBDFDB;
+  max-width: 940px;
+  max-height: 366px;
+  border-radius: 30px;
+  margin: 0 16%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+div.content {
+  display: flex;
+  flex-direction: column; 
+  margin-left: 50px;
+  max-width: 50%;
+}
+
+div.title {
+  max-width: 305px;
+  margin-bottom: 10px;
+}
+
+div.description {
+  max-width: 316px;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+div.cook-image {
+  max-width: 50%;
+  margin-right: 100px;
+  margin-top: 70px;
 }
