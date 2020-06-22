@@ -89,6 +89,7 @@ div.card {
   max-width: 300px;
   max-height: 140px;
   margin: 50px 0;
+  cursor: pointer;
 }
 
 div.card img {
@@ -150,4 +151,69 @@ div.about p{
   font-size: 18px;
   line-height: 28px;
   margin: 20px 0;
+}
+
+/*======Recipe-page=======*/
+div.recipe-page {
+  max-width: 940px;
+  border-radius: 30px;
+  margin: 0 16%;
+}
+
+/*======Modal-overlay=======*/
+div.modal-overlay {
+  visibility: hidden;
+  opacity: 0;
+}
+
+div.modal {
+  max-width: 660px;
+  height: 413px;
+  background-color: #FFFFFF;
+  border-radius: 16px;
+  margin: 20vh auto;
+  position: relative;
+}
+
+div.modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+div.modal-content img {
+  width: 600px;
+  height: 200px;
+  margin: 20px 0;
+  border-radius: 15px;
+}
+
+div.modal-content h2 {
+  font-size: 24px;
+  line-height: 28px;
+  color: #111111;
+  margin-bottom: 5px;
+}
+
+div.modal-content span {
+  font-size: 18px;
+  line-height: 21px;
+  opacity: 0.5;
+}
+
+div.close-modal {
+  margin-top: 60px;
+  line-height: 19px;
+  cursor: pointer;
+}
+
+/*========Modal Active=======*/
+div.modal-overlay.active {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  visibility: visible;
+  opacity: 1;
 }
