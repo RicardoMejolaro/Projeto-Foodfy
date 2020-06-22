@@ -71,7 +71,7 @@ div.cook-image {
   margin-top: 70px;
 }
 
-div.more-access {
+div.recipe {
   max-width: 940px;
   max-height: 366px;
   border-radius: 30px;
@@ -88,7 +88,7 @@ div.cards {
 div.card {
   max-width: 300px;
   max-height: 140px;
-  margin: 32px 0;
+  margin: 50px 0;
 }
 
 div.card img {
