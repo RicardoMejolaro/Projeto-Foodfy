@@ -71,3 +71,41 @@ div.cook-image {
   margin-right: 100px;
   margin-top: 70px;
 }
+
+div.more-access {
+  max-width: 940px;
+  max-height: 366px;
+  border-radius: 30px;
+  margin: 32px 16%;
+}
+
+div.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+div.card {
+  max-width: 300px;
+  max-height: 140px;
+  margin: 32px 0;
+}
+
+div.card img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+div.info-card {
+  margin: 20px 0;
+}
+
+div.info-card span {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+div.info-card p {
+  margin-top: 5px;
+  opacity: 0.5;
+}
