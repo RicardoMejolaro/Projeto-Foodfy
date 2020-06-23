@@ -24,6 +24,10 @@
 O LaunchBase é um treinamento no formato de bootcamp online que tem duração de 8 semanas. A cada semana os conteúdos são liberados de acordo com um cronograma, guiando o aluno pelas ferramentas e conceitos mais modernos de desenvolvimento web para entrar com o pé direito nesse universo e ir direto ao ponto naquilo que realmente importa para alcançar seus maiores objetivos como dev..
 
 ### Módulo Front-end
+
+<h2>Link do desafio</h2>
+<a>https://github.com/Rocketseat/bootcamp-launchbase-desafios-02/blob/master/desafios/02-foodfy.md</a>
+
 <h2>Página inicial</h2>
 <ul>
   <li>Menu para três páginas</li>
