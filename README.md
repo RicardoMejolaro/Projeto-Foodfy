@@ -1,5 +1,5 @@
 <h1 align=center>
-<img src="src/assets/logo-launchbase.svg" alt="Bootcamp LaunchBase" width="250px">
+<img src="src/assets/logo-launchbase.svg" alt="Bootcamp LaunchBase" width="350px">
 </h1>
 
 <h4 align="center"> 
@@ -26,7 +26,7 @@ O LaunchBase é um treinamento no formato de bootcamp online que tem duração d
 ### Módulo Front-end
 
 <h2>Link do desafio</h2>
-<a href="https://github.com/Rocketseat/bootcamp-launchbase-desafios-02/blob/master/desafios/02-foodfy.md">Acessar</a>
+<a href="https://github.com/Rocketseat/bootcamp-launchbase-desafios-02/blob/master/desafios/02-foodfy.md" target="_blank">Acessar</a>
 
 <h2>Página inicial</h2>
 <ul>
