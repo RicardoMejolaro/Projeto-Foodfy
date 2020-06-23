@@ -15,7 +15,7 @@
 - [Tecnologias utilizadas](#🚀️-Tecnologias-utilizadas)
 - [Acrescentado ao projeto original](#💻️-Acrescentado-ao-projeto-original)
 - [Como usar](#💾️-Como-baixar/testar-o-projeto)
-- [Contato](#-Desenvolvido-por:)
+- [Contato](#-Desenvolvido-por: )
 
 ---
 
