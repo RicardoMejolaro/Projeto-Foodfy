@@ -82,7 +82,6 @@ div.cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
-  margin-bottom: 200px;
 }
 
 div.card {
@@ -143,7 +142,6 @@ div.container-about h3 {
 
 div.about {
   max-width: 940px;
-  max-height: 280px;
 }
 
 div.about p{
@@ -158,12 +156,18 @@ div.recipe-page {
   max-width: 940px;
   border-radius: 30px;
   margin: 0 16%;
+  margin-bottom: 150px;
 }
 
 /*======Modal-overlay=======*/
 div.modal-overlay {
-  visibility: hidden;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
   opacity: 0;
+  visibility: hidden;
 }
 
 div.modal {
