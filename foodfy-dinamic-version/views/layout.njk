@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {% block head %}
+      <title>Foodfy - Seu site de receitas</title>
+    {% endblock %}
+
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+  </head>
+
+  <body>
+
+    <header>
+      <div class="menu">
+        <div class="logo">
+          <a href="/">
+            <img src="/assets/logo.png" alt="Logo foodfy">
+          </a>
+        </div>
+        <div class="links">
+          <a href="/sobre">Sobre</a>
+          <a href="/receitas">Receitas</a>
+        </div>
+      </div>
+    </header>
+
+    {% block content %}{% endblock %}
+
+    <div class="content-footer">
+      <span>
+        &copy; Todos os direitos reservados, receitas foodfy
+        <strong>2020</strong>
+      </span>
+    </div>
+
+  </body>
+
+</html>
