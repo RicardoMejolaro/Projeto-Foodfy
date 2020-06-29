@@ -94,6 +94,7 @@ div.card {
 
 div.card img {
   width: 100%;
+  height: 120px;
   border-radius: 15px;
 }
 
@@ -160,67 +161,88 @@ div.recipe-page {
   margin-top: -50px;
 }
 
+/*======Recipe Details Page=======*/
+div.recipe-page-details {
+  max-width: 70%;
+  border-radius: 30px;
+  margin: 0 16%;
+  margin-bottom: 100px;
+  text-align: center;
+}
 
-/*======Modal-overlay=======*/
-div.modal-overlay {
-  background-color: rgba(0, 0, 0, 0.7);
+div.recipe-details img{
   width: 100%;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  opacity: 0;
-  visibility: hidden;
-}
-
-div.modal {
-  max-width: 660px;
-  height: 413px;
-  background-color: #FFFFFF;
-  border-radius: 16px;
-  margin: 20vh auto;
-  position: relative;
-}
-
-div.modal-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-div.modal-content img {
-  width: 600px;
-  height: 200px;
-  margin: 20px 0;
+  height: 280px;
   border-radius: 15px;
+  margin: 5px 0 50px 0;
 }
 
-div.modal-content span {
+div.info-recipe-details span {
+  font-size: 36px;
+  line-height: 42px;
+  font-weight: bold;
+}
+
+div.info-recipe-details p {
+  color: #777777;
+  font-size: 20px;
+  margin-bottom: 50px;
+}
+
+div.contents {
+  width: 100%;
+  text-align: left;
+  margin-bottom: 50px;
+}
+
+div.head {
+  display: flex;
+  flex-direction: row;
+  margin: 0px 0px 20px 0;
+  height: auto;
+}
+
+div.head h2 {
   font-size: 24px;
   line-height: 28px;
-  color: #111111;
-  margin-bottom: 10px;
+  margin-right: 10px;
 }
 
-div.modal-content p {
-  font-size: 18px;
-  line-height: 21px;
-  opacity: 0.5;
+div.head a {
+  color: #999999 ;
+  font-size: 12px;
+  line-height: 14px;
+  margin: auto 0;
 }
 
-div.close-modal {
-  margin-top: 60px;
-  line-height: 19px;
-  cursor: pointer;
-  opacity: 0.5;
-}
-
-/*========Modal Active=======*/
-div.modal-overlay.active {
+div.content-recipe-details {
   width: 100%;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  background-color: rgba(0, 0, 0, 0.7);
-  visibility: visible;
-  opacity: 1;
+  margin-left: 20px;
 }
+
+div.content-recipe-details li{
+  width: 100%;
+  color: #444444;
+  font-size: 18px;
+  line-height: 28px;
+  text-align: left;
+}
+
+div.content-recipe-details p.no-margin {
+  width: 100%;
+  color: #444444;
+  font-size: 18px;
+  text-align: left;
+  margin-left: -20px;
+  margin-bottom: 0;
+}
+
+div.content-recipe-details p {
+  width: 100%;
+  color: #444444;
+  font-size: 18px;
+  text-align: left;
+  margin-left: -20px;
+  margin-bottom: 2em;
+}
+

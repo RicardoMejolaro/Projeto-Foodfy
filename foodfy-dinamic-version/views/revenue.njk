@@ -7,8 +7,8 @@
 {% block content %}
   <div class="recipe-page">
     <div class="cards">
-      {% for recipe in revenue %}
-      <div class="card">
+      {% for recipe in revenues %}
+      <div class="card" id="{{recipe.id}}">
         <img src="{{recipe.image}}" alt="{{recipe.title}}">
         <div class="info-card">
           <span>{{recipe.title}}</span>
@@ -16,19 +16,6 @@
         </div>
       </div>
       {% endfor %}
-    </div>
-  </div>
-
-  <div class="modal-overlay">
-    <div class="modal">
-      <div class="modal-content">
-        <img src="" alt="">
-        <span></span>
-        <p></p>
-        <div class="close-modal">
-          <span>Fechar Modal</span>
-        </div>
-      </div>
     </div>
   </div>
 

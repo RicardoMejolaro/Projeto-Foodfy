@@ -2,7 +2,7 @@ const express = require('express');
 const nunjucks = require('nunjucks');
 
 //Importando arquivos com as info das receitas
-const revenue = require("./data");
+const revenues = require("./data");
 
 //Iniciando o servidor
 const server = express();
@@ -22,7 +22,7 @@ nunjucks.configure('views', {
 
 //Rotas
 server.get('/', (req, res) => {
-  return res.render('index', { revenue });
+  return res.render('index', { revenues });
 })
 
 server.get('/sobre', (req, res) => {
@@ -30,7 +30,19 @@ server.get('/sobre', (req, res) => {
 })
 
 server.get('/receitas', (req, res) => {
-  return res.render('revenue', { revenue });
+  return res.render('revenue', { revenues });
+})
+
+server.get("/receitas/:id", function (req, res) {
+  const recipeIndex = req.params.id;
+
+  const recipe = revenues.find( recipe => recipe.id == recipeIndex );
+
+  if(!recipe) {
+   return res.send("Receita não encontrada!");
+  } 
+
+  return res.render('watch-recipe-details', { recipe })
 })
 
 //Definindo a porta da aplicação
