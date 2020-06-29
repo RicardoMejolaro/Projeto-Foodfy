@@ -1,5 +1,5 @@
 <h1 align=center>
-<img src="src/assets/logo-launchbase.svg" alt="Bootcamp LaunchBase" width="200px">
+<img src="src/assets/logo-launchbase.svg" alt="Bootcamp LaunchBase" width="350px">
 </h1>
 
 <h4 align="center"> 
@@ -15,7 +15,11 @@
 - [Tecnologias utilizadas](#🚀️-Tecnologias-utilizadas)
 - [Acrescentado ao projeto original](#💻️-Acrescentado-ao-projeto-original)
 - [Como usar](#💾️-Como-baixar/testar-o-projeto)
+<<<<<<< HEAD:foodfy-static-version/README.md
 - [Contato](#-Desenvolvido-por:)
+=======
+- [Contato](#-Desenvolvido-por: )
+>>>>>>> 312d8e523f5e2e88381168fc79f1520fb14f7597:README.md
 
 ---
 
@@ -24,6 +28,10 @@
 O LaunchBase é um treinamento no formato de bootcamp online que tem duração de 8 semanas. A cada semana os conteúdos são liberados de acordo com um cronograma, guiando o aluno pelas ferramentas e conceitos mais modernos de desenvolvimento web para entrar com o pé direito nesse universo e ir direto ao ponto naquilo que realmente importa para alcançar seus maiores objetivos como dev..
 
 ### Módulo Front-end
+
+<h2>Link do desafio</h2>
+<a href="https://github.com/Rocketseat/bootcamp-launchbase-desafios-02/blob/master/desafios/02-foodfy.md" target="_blank">Acessar</a>
+
 <h2>Página inicial</h2>
 <ul>
   <li>Menu para três páginas</li>
