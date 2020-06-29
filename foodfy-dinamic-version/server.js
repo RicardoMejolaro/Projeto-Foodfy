@@ -30,7 +30,7 @@ server.get('/sobre', (req, res) => {
 })
 
 server.get('/receitas', (req, res) => {
-  return res.render('revenue');
+  return res.render('revenue', { revenue });
 })
 
 //Definindo a porta da aplicação

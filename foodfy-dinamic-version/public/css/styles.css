@@ -157,8 +157,9 @@ div.recipe-page {
   max-width: 940px;
   border-radius: 30px;
   margin: 0 16%;
-  margin-bottom: 150px;
+  margin-top: -50px;
 }
+
 
 /*======Modal-overlay=======*/
 div.modal-overlay {
