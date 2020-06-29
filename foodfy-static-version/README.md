@@ -15,11 +15,9 @@
 - [Tecnologias utilizadas](#🚀️-Tecnologias-utilizadas)
 - [Acrescentado ao projeto original](#💻️-Acrescentado-ao-projeto-original)
 - [Como usar](#💾️-Como-baixar/testar-o-projeto)
-<<<<<<< HEAD:foodfy-static-version/README.md
 - [Contato](#-Desenvolvido-por:)
-=======
-- [Contato](#-Desenvolvido-por: )
->>>>>>> 312d8e523f5e2e88381168fc79f1520fb14f7597:README.md
+
+
 
 ---
 
