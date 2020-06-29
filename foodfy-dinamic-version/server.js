@@ -2,7 +2,7 @@ const express = require('express');
 const nunjucks = require('nunjucks');
 
 //Importando arquivos com as info das receitas
-const recipes = require("./data");
+const revenue = require("./data");
 
 //Iniciando o servidor
 const server = express();
@@ -22,7 +22,7 @@ nunjucks.configure('views', {
 
 //Rotas
 server.get('/', (req, res) => {
-  return res.render('index');
+  return res.render('index', { revenue });
 })
 
 server.get('/sobre', (req, res) => {
