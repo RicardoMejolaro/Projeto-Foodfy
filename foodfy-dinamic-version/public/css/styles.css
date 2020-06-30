@@ -213,11 +213,24 @@ div.head a {
   font-size: 12px;
   line-height: 14px;
   margin: auto 0;
+  cursor: pointer;
 }
 
 div.content-recipe-details {
   width: 100%;
   margin-left: 20px;
+}
+
+div.content-recipe-details.ingredients {
+  display: none;
+}
+
+div.content-recipe-details.preparation {
+  display: none;
+}
+
+div.content-recipe-details.information {
+  display: none;
 }
 
 div.content-recipe-details li{

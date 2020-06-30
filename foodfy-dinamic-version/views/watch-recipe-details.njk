@@ -18,9 +18,9 @@
     <div class="contents">
       <div class="head">
         <h2>Ingredientes</h2>
-        <a>Esconder</a>
+        <a id="ingredients">Esconder</a>
       </div>
-      <div class="content-recipe-details">
+      <div class="content-recipe-details" id="ingredients">
         <ul>
           {% for ingredient in recipe.ingredients %}
             <li>{{ingredient}}</li>
@@ -32,9 +32,9 @@
     <div class="contents">
       <div class="head">
         <h2>Modo de preparo</h2>
-        <a>Esconder</a>
+        <a id="preparation">Esconder</a>
       </div>
-      <div class="content-recipe-details">
+      <div class="content-recipe-details" id="preparation">
         {% for preparation in recipe.preparation %}
           <p class="no-margin">{{preparation}}</p>
         {% endfor %}
@@ -44,9 +44,9 @@
     <div class="contents">
       <div class="head">
         <h2>Informações adicionais</h2>
-        <a>Esconder</a>
+        <a id="information">Esconder</a>
       </div>
-      <div class="content-recipe-details">
+      <div class="content-recipe-details" id="information">
         {% for information in recipe.information %}
           <p>{{information}}</p>
         {% endfor %}
@@ -55,4 +55,6 @@
 
   </div>
 
+  <script src="/scripts/scripts.js"></script>
+  
 {% endblock %}
