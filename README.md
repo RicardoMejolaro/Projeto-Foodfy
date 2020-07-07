@@ -122,7 +122,7 @@ $ git clone https://github.com/RicardoMejolaro/Projeto-Foodfy.git
 $ cd foodfy-dinamic-version
 
 #Abrir projeto no VsCode ou com seu prompt de comando de preferência
-code . ||  cd mfoodfy-dinamic-version (Passo acima) 
+code . ||  cd foodfy-dinamic-version (Passo acima) 
 
 #Com o terminal aberto rodar o comando
 $ npm install para instalar as dependências necessárias
