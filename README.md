@@ -1,6 +1,6 @@
 <h1 align=center>
 <img src="foodfy-dinamic-version/public/assets/logo-launchbase.svg" alt="Bootcamp LaunchBase" width="350px">
-<h2 align=center><strong>Redme Versão Foodfy Dinâmico<strong></h2>
+<h2 align=center><strong>Readme Versão Foodfy Dinâmico<strong></h2>
 </h1>
 
 <h4 align="center"> 
