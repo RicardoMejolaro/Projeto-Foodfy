@@ -12,5 +12,6 @@ routes.get("/receitas/:id", recipes.recipe);
 
 //Rotas Administrador da aplicação
 routes.get("/admin/receitas", recipesManager.index); // Mostrar a lista de receitas
+routes.get("/admin/receitas/:id", recipesManager.show); // Exibir detalhes de uma receita
 
 module.exports = routes;

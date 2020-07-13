@@ -3,9 +3,6 @@ const nunjucks = require('nunjucks');
 const routes = require('./routes/routes');
 const methodOverride = require('method-override');
 
-//Importando arquivos com as info das receitas
-const revenues = require("./file-system/data");
-
 //Iniciando o servidor
 const server = express();server.use(express.urlencoded({ extended: true}));
 //Definindo os arquivos estáticos da aplicação

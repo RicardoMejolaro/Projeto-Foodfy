@@ -1,8 +1,8 @@
-const recipes = require('../file-system/data.js');
+const data = require('../file-system/data.json');
 
 //Index Aplicação
 exports.index = (req, res) => {
-  return res.render('aplication/index', { recipes });
+  return res.render('aplication/index', { recipes: data.recipes });
 }
 //Página Sobre Aplicação
 exports.about = (req, res) => {
@@ -10,13 +10,13 @@ exports.about = (req, res) => {
 }
 //Página Receitas Aplicação
 exports.recipes = (req, res) => {
-  return res.render('aplication/revenue', { recipes });
+  return res.render('aplication/revenue', { recipes: data.recipes });
 }
 //Página Detalhes Receita Aplicação
 exports.recipe = function (req, res) {
   const recipeIndex = req.params.id;
 
-  const recipe = recipes.find( recipe => recipe.id == recipeIndex );
+  const recipe = data.recipes.find( recipe => recipe.id == recipeIndex );
 
   if(!recipe) {
    return res.send("Receita não encontrada!");
