@@ -1,0 +1,39 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+  <title>Foodfy - Gerenciador de receitas</title>
+{% endblock %}
+
+{% block header %}
+   <header class="header-manager">
+      <div class="menu-manager">
+        <div class="logo-manager">
+          <a href="/admin/recipes">
+            <img src="/assets/logo-manager.png" alt="Logo foodfy">
+          </a>
+        </div>
+      </div>
+    </header>
+{% endblock %}
+
+{% block content %}
+
+  <div class="recipe">
+    <h2>Gerenciar Receitas</h2>
+    <div class="cards-manager">
+      {% for recipe in recipes %}
+        <div class="card-manager">
+          <img src="{{recipe.image}}" alt="{{recipe.title}}">
+          <div class="info-card-manager">
+            <span>{{recipe.title}}</span>
+            <p>{{recipe.author}}</p>
+            <a href="#" id="{{recipe.id}}">Visualizar</a>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <script src="/scripts/scripts.js"></script>
+
+{% endblock %}

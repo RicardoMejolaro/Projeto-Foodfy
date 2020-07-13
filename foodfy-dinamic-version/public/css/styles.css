@@ -85,7 +85,8 @@ div.cards {
   margin-bottom: 200px;
 }
 
-div.card {
+div.card,
+div.card-index {
   max-width: 300px;
   max-height: 140px;
   margin: 50px 0;
@@ -93,17 +94,10 @@ div.card {
 }
 
 div.card-index {
-  max-width: 300px;
-  max-height: 140px;
-  margin: 50px 0;
+  cursor: initial;
 }
 
-div.card img {
-  width: 100%;
-  height: 120px;
-  border-radius: 15px;
-}
-
+div.card img,
 div.card-index img {
   width: 100%;
   height: 120px;
@@ -270,4 +264,77 @@ div.content-recipe-details p {
   margin-left: -20px;
   margin-bottom: 2em;
 }
+
+/*==========Page index Gerenciador======*/
+header.header-manager {
+  width: 100%;
+  margin: 0;
+}
+
+div.menu-manager {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+  background-color: #111111;
+}
+
+div.logo-manager {
+  display: flex;
+  margin: auto 16%;
+}
+
+div.cards-manager {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin: 50px 0;
+}
+
+div.card-manager {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  height: 100px;
+}
+
+div.card-manager img {
+  width: 100%;
+  height: 100px;
+  border-radius: 15px;
+}
+
+div.info-card-manager {
+  margin-left: 20px;
+  box-sizing: border-box;
+}
+
+div.info-card-manager span {
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: bold;
+}
+
+div.info-card-manager p {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: bold;
+  margin-top: 10px;
+  opacity: 0.5;
+}
+
+div.info-card-manager a {
+  font-size: 14px;
+  line-height: 16px;
+  color: #6558C3;
+  font-weight: bold;
+  margin-top: 10px;
+  display: inline-block;
+  text-decoration: none;
+}
+
+div.info-card-manager a:hover {
+  opacity: 0.8;
+}
+
 

@@ -15,19 +15,21 @@
 
   <body>
 
-    <header>
-      <div class="menu">
-        <div class="logo">
-          <a href="/">
-            <img src="/assets/logo.png" alt="Logo foodfy">
-          </a>
+    {% block header %}
+      <header>
+        <div class="menu">
+          <div class="logo">
+            <a href="/">
+              <img src="/assets/logo.png" alt="Logo foodfy">
+            </a>
+          </div>
+          <div class="links">
+            <a href="/sobre">Sobre</a>
+            <a href="/receitas">Receitas</a>
+          </div>
         </div>
-        <div class="links">
-          <a href="/sobre">Sobre</a>
-          <a href="/receitas">Receitas</a>
-        </div>
-      </div>
-    </header>
+      </header>
+    {% endblock %}
 
     {% block content %}{% endblock %}
 

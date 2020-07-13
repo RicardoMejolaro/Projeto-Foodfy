@@ -37,6 +37,16 @@ for (const link of linkView) {
   });
 }
 
+//Lógica de abertura de página de edição de receita no gerenciador de receitas
+const viewRecipes = document.querySelectorAll('.info-card-manager a');
+
+for (const viewRecipe of viewRecipes) {
+  viewRecipe.addEventListener('click', () => {
+    const recipeId = viewRecipe.getAttribute('id');
+    window.location.href = `receitas/${recipeId}`;
+  });
+}
+
 
 
 

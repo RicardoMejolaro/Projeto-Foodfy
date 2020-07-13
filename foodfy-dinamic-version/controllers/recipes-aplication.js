@@ -1,4 +1,3 @@
-const fs = require('fs');
 const recipes = require('../file-system/data.js');
 
 //Index Aplicação
