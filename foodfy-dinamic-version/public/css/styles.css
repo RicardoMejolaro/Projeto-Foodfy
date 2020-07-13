@@ -92,7 +92,19 @@ div.card {
   cursor: pointer;
 }
 
+div.card-index {
+  max-width: 300px;
+  max-height: 140px;
+  margin: 50px 0;
+}
+
 div.card img {
+  width: 100%;
+  height: 120px;
+  border-radius: 15px;
+}
+
+div.card-index img {
   width: 100%;
   height: 120px;
   border-radius: 15px;
