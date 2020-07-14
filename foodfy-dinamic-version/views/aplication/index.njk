@@ -1,5 +1,24 @@
 {% extends "layout.njk" %}
 
+  {% block header %}
+    <header>
+      <div class="menu">
+        <div class="logo">
+          <a href="/">
+            <img src="/assets/logo.png" alt="Logo foodfy">
+          </a>
+        </div>
+        <div class="links">
+          <a href="/sobre">Sobre</a>
+          <a href="/receitas">Receitas</a>
+        </div>
+        <div class="admin">
+          <a href="/admin/receitas">Administrador</a>
+        </div>
+      </div>
+    </header>
+  {% endblock %}
+
 {% block content %}
 
   <div class="banner">

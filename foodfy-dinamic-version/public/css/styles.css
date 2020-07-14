@@ -194,8 +194,7 @@ div.recipe-page {
 div.recipe-page-details {
   max-width: 70%;
   border-radius: 30px;
-  margin: 0 16%;
-  margin-bottom: 100px;
+  margin: 0 0 100px 16%;
   text-align: center;
 }
 
@@ -308,7 +307,6 @@ div.logo-manager {
 }
 
 div.admin-manager {
-  display: flex;
   margin: auto 16%;
 }
 
@@ -319,6 +317,21 @@ div.admin-manager a{
   border-radius: 8px;
   text-decoration: none;
   font-weight: bold;
+  text-align: center;
+}
+
+div.site-manager {
+  margin: auto;
+}
+
+div.site-manager a{
+  background-color: #FFF;
+  color: #6558C3;
+  padding: 8px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
 }
 
 div.admin-manager a:hover {
@@ -328,7 +341,7 @@ div.admin-manager a:hover {
 div.cards-manager {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 20px;
+  gap: 50px;
   margin: 30px 0 100px 0;
 }
 
@@ -347,7 +360,6 @@ div.card-manager img {
 
 div.info-card-manager {
   margin-left: 20px;
-  box-sizing: border-box;
 }
 
 div.info-card-manager span {
@@ -496,7 +508,7 @@ button.add-preparo {
   font-weight: bold;
   color: #6558C3;
   display: inline-block;
-  margin-top: 5px;
+  margin: 5px 0 20px 0;
   background-color: #FFF;
   outline: none;
   cursor: pointer;
