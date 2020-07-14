@@ -1,3 +1,13 @@
+//Lógica link selecionado
+const currentPage = location.pathname;
+const menuItems = document.querySelectorAll('header .links a');
+
+for (const item of menuItems) {
+  if (currentPage.includes(item.getAttribute('href'))) {
+    item.classList.add("active")
+  }
+}
+
 //Lógica clica no card da página revenue e redireciona para uma nova página
 //com os detalhes da receita clicada
 const cards = document.querySelectorAll('.card');

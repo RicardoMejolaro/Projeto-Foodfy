@@ -53,9 +53,11 @@
         <a id="preparation">Esconder</a>
       </div>
       <div class="content-recipe-details" id="preparation">
+        <ol>
         {% for preparation in recipe.preparation %}
-          <p class="no-margin">{{preparation}}</p>
+          <li>{{preparation}}</li>
         {% endfor %}
+        </ol>
       </div>
     </div>
 

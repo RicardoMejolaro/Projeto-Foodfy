@@ -20,6 +20,7 @@ div.menu {
   display: flex;
   height: 70px;
   margin: 0 16%;
+  position: relative;
 }
 
 div.links {  
@@ -28,13 +29,35 @@ div.links {
 
 div.links a {
   color: #111111;
+  font-size: 18px;
   line-height: 26px;
   margin: 16px;
   text-decoration: none;
 }
 
+div.admin a{
+  background-color: #111111;
+  color: #FFF;
+  padding: 8px 16px;
+  border-radius: 8px;
+  position: absolute;
+  right: 0;
+  text-decoration: none;
+}
+
 div.links a:hover {
+  color: #6558C3;
+  font-weight: bold;
   text-decoration: underline;
+}
+
+div.links a.active {
+  color: #6558C3;
+  font-weight: bold;
+}
+
+div.links a.active:hover {
+  opacity: 0.5;
 }
 
 div.banner {
@@ -247,13 +270,12 @@ div.content-recipe-details li{
   text-align: left;
 }
 
-div.content-recipe-details p.no-margin {
+div.content-recipe-details ol li {
   width: 100%;
   color: #444444;
   font-size: 18px;
   text-align: left;
-  margin-left: -20px;
-  margin-bottom: 0;
+  margin-bottom: 5px;
 }
 
 div.content-recipe-details p {
@@ -273,6 +295,7 @@ header.header-manager {
 
 div.menu-manager {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
   height: 80px;
@@ -282,6 +305,24 @@ div.menu-manager {
 div.logo-manager {
   display: flex;
   margin: auto 16%;
+}
+
+div.admin-manager {
+  display: flex;
+  margin: auto 16%;
+}
+
+div.admin-manager a{
+  background-color: #FFF;
+  color: #6558C3;
+  padding: 8px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+div.admin-manager a:hover {
+  opacity: 0.5;
 }
 
 div.cards-manager {

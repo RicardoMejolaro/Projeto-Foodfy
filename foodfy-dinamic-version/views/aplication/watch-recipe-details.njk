@@ -35,9 +35,11 @@
         <a id="preparation">Esconder</a>
       </div>
       <div class="content-recipe-details" id="preparation">
-        {% for preparation in recipe.preparation %}
-          <p class="no-margin">{{preparation}}</p>
-        {% endfor %}
+        <ol>
+          {% for preparation in recipe.preparation %}
+            <li>{{preparation}}</li>
+          {% endfor %}
+        </ol>
       </div>
     </div>
 
@@ -47,14 +49,12 @@
         <a id="information">Esconder</a>
       </div>
       <div class="content-recipe-details" id="information">
-        {% for information in recipe.information %}
-          <p>{{information}}</p>
-        {% endfor %}
+        <p>{{ recipe.information }}</p>
       </div>
     </div>
 
   </div>
 
   <script src="/scripts/scripts.js"></script>
-  
+
 {% endblock %}
