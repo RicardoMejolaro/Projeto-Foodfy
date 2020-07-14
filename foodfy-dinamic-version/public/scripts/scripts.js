@@ -37,15 +37,47 @@ for (const link of linkView) {
   });
 }
 
-//Lógica de abertura de página de edição de receita no gerenciador de receitas
-const viewRecipes = document.querySelectorAll('.info-card-manager a');
+//Função de adicionar novo input nos ingredients
+function addIngredient() {
+  const ingredients = document.querySelector("#ingredients");
+  const fieldContainer = document.querySelectorAll(".ingredient");
 
-for (const viewRecipe of viewRecipes) {
-  viewRecipe.addEventListener('click', () => {
-    const recipeId = viewRecipe.getAttribute('id');
-    window.location.href = `receitas/${recipeId}`;
-  });
+  // Realiza um clone do último ingrediente adicionado
+  const newField = fieldContainer[fieldContainer.length - 1].cloneNode(true);
+
+  // Não adiciona um novo input se o último tem um valor vazio
+  if (newField.children[0].value == "") return false;
+
+  // Deixa o valor do input vazio
+  newField.children[0].value = "";
+  ingredients.appendChild(newField);
 }
+
+document
+  .querySelector(".add-ingredient")
+  .addEventListener("click", addIngredient);
+
+
+//Função de adicionar novo input nos itens modo de preparo
+function addPreparo() {
+  const preparos = document.querySelector("#preparos");
+  const fieldContainer = document.querySelectorAll(".preparo");
+
+  // Realiza um clone do último preparo adicionado
+  const newField = fieldContainer[fieldContainer.length - 1].cloneNode(true);
+
+  // Não adiciona um novo input se o último tem um valor vazio
+  if (newField.children[0].value == "") return false;
+
+  // Deixa o valor do input vazio
+  newField.children[0].value = "";
+  preparos.appendChild(newField);
+}
+
+document
+  .querySelector(".add-preparo")
+  .addEventListener("click", addPreparo);
+
 
 
 

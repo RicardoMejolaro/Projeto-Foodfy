@@ -5,15 +5,15 @@
 {% endblock %}
 
 {% block header %}
-   <header class="header-manager">
-      <div class="menu-manager">
-        <div class="logo-manager">
-          <a href="/admin/receitas">
-            <img src="/assets/logo-manager.png" alt="Logo foodfy">
-          </a>
-        </div>
+  <header class="header-manager">
+    <div class="menu-manager">
+      <div class="logo-manager">
+        <a href="/admin/receitas">
+          <img src="/assets/logo-manager.png" alt="Logo foodfy">
+        </a>
       </div>
-    </header>
+    </div>
+  </header>
 {% endblock %}
 
 {% block content %}
@@ -27,13 +27,11 @@
           <div class="info-card-manager">
             <span>{{recipe.title}}</span>
             <p>{{recipe.author}}</p>
-            <a href="#" id="{{recipe.id}}">Visualizar</a>
+            <a href="/admin/receitas/{{ recipe.id }}">Visualizar</a>
           </div>
         </div>
       {% endfor %}
     </div>
   </div>
-
-  <script src="/scripts/scripts.js"></script>
 
 {% endblock %}

@@ -265,7 +265,7 @@ div.content-recipe-details p {
   margin-bottom: 2em;
 }
 
-/*==========Page index Gerenciador======*/
+/*==========Page index Manager======*/
 header.header-manager {
   width: 100%;
   margin: 0;
@@ -366,6 +366,111 @@ div.title-button a.button {
   outline: none;
   cursor: pointer;
   text-decoration: none;
+}
+
+/*==========Page Edit============*/
+/*=======DETAILS=======*/
+
+.details {
+  max-width: 70%;
+  margin: 0 auto;
+  padding: 32px;
+  margin-bottom: 100px;
+  position: relative;
+}
+
+.details .item {
+  padding: 16px 0;
+}
+
+.details .item:last-child {
+  border-bottom: none;
+}
+
+.details h3 {
+  margin: 25px 0 30px -5px;
+  font-size: 24px;
+  line-height: 28px;
+  color: #111111;
+  letter-spacing: 0.7px;
+  font-weight: bold;
+}
+
+/*=========Fields============*/
+
+.details .item div:nth-child(1) {
+  font-size: 16px;
+  line-height: 19px;
+  color: #111111;
+  font-weight: bold;
+}
+
+input,
+textarea {
+  color: #111111;
+  font-size: 16px;
+  line-height: 26px;
+  width: 100%;
+  border: 2px solid #DDDDDD;
+  outline: none;
+  height: 25px;
+  padding: 15px;
+  margin-top: 10px;
+}
+
+.details .item div:nth-child(2) textarea {
+  font-family: 'Roboto', sans-serif;
+  height: 250px;
+  margin-top: 10px;
+}
+
+input::placeholder {
+  font-size: 16px;
+  font-weight: normal;
+}
+
+button.add-ingredient,
+button.add-preparo {
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: bold;
+  color: #6558C3;
+  display: inline-block;
+  margin-top: 5px;
+  background-color: #FFF;
+  outline: none;
+  cursor: pointer;
+}
+
+.item div:nth-child(2) button:hover {
+  opacity: 0.7;
+}
+
+button[type="submit"] {
+  padding: 8px 32px;
+  background-color: #6558C3;
+  border-radius: 6px;
+  max-width: 180px;
+  color: #FFF;
+  font-size: 16px;
+  font-weight: bold;
+  outline: none;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  top: 60px;
+}
+
+button[type="submit"]:hover {
+  opacity: 0.8;
+  transition: 500ms;
+}
+
+#form-delete button[type="submit"] {
+  background-color: #DC4747;
+  right: 180px;
+  top: 60px;
+  margin-right: 10px;
 }
 
 

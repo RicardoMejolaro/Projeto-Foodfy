@@ -19,8 +19,9 @@
 
 {% block content %}
   <div class="title-button">
-    <h2>Receita: {{recipe.title}}</h2>
-    <a class="button" href="/receitas/{{ recipe.id }}/edit ">Editar Receita</a>
+    <h2>Receita:
+      {{recipe.title}}</h2>
+    <a class="button" href="/admin/receitas/{{ recipe.id }}/edit ">Editar Receita</a>
   </div>
 
   <div class="recipe-page-details">
@@ -64,9 +65,7 @@
         <a id="information">Esconder</a>
       </div>
       <div class="content-recipe-details" id="information">
-        {% for information in recipe.information %}
-          <p>{{information}}</p>
-        {% endfor %}
+        <p>{{recipe.information}}</p>
       </div>
     </div>
 
