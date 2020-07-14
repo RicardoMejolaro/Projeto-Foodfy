@@ -71,9 +71,7 @@
         "Em uma frigideira ou assador coloque o óleo quando estiver quente frite até ficarem douradas.",
         "Para servir fica bonito com salada, ou abuse da criatividade."
       ],
-      "information": [
-        ""
-      ]
+      "information": "Não há"
     },
     {
       "id": 3,
@@ -149,6 +147,76 @@
       "information": [
         ""
       ]
+    },
+    {
+      "id": 6,
+      "image": "https://img.itdg.com.br/tdg/images/recipes/000/072/243/16144/16144_original.jpg?mode=crop&width=710&height=400",
+      "title": "Bolo Simples",
+      "author": "Ana Luísa",
+      "ingredients": [
+        "2 xícaras de açúcar",
+        "3 xícaras de farinha de trigo",
+        "4 colheres de margarina bem cheias",
+        "3 ovos",
+        "1 1/2 xícaras de leite aproximadamente",
+        "1 colher (sopa) de fermento em pó bem cheia"
+      ],
+      "preparation": [
+        "Bata as claras em neve, reserve.",
+        "Bata bem as gemas com a margarina e o açúcar.",
+        "Acrescente o leite e farinha aos poucos sem parar de bater.",
+        "Por último agregue as claras em neve e o fermento.",
+        "Coloque em forma grande de furo central untada e enfarinhada.",
+        "Asse em forno médio, pré-aquecido, por aproximadamente 40 minutos.",
+        "Quando espetar um palito e sair limpo estará assado."
+      ],
+      "information": "Não há"
+    },
+    {
+      "id": 7,
+      "image": "https://img.itdg.com.br/tdg/images/recipes/000/072/243/16144/16144_original.jpg?mode=crop&width=710&height=400",
+      "title": "Bolo Simples",
+      "author": "Ana Luísa",
+      "ingredients": [
+        "2 xícaras de açúcar",
+        "Teste"
+      ],
+      "preparation": [
+        "Bata as claras em neve, reserve."
+      ],
+      "information": "Não há"
+    },
+    {
+      "id": 8,
+      "image": "https://images.unsplash.com/photo-1503596476-1c12a8ba09a9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+      "title": "teste",
+      "author": "teste",
+      "ingredients": [
+        "teste",
+        "teste2",
+        "Teste3",
+        "TEste 4"
+      ],
+      "preparation": [
+        "teste3",
+        "teste4"
+      ],
+      "information": "Teste"
+    },
+    {
+      "id": 9,
+      "image": "https://img.itdg.com.br/tdg/images/recipes/000/072/243/16144/16144_original.jpg?mode=crop&width=710&height=400",
+      "title": "Pizza 2 estações",
+      "author": "Jorge Relato 2",
+      "ingredients": [
+        "2 xícaras de açúcar",
+        "Teste3"
+      ],
+      "preparation": [
+        "Quando espetar um palito e sair limpo estará assado.",
+        "Bata as claras em neve, reserve."
+      ],
+      "information": "Não há."
     }
   ]
 }

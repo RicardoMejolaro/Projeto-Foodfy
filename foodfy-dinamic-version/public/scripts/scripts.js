@@ -42,7 +42,7 @@ function addIngredient() {
   const ingredients = document.querySelector("#ingredients");
   const fieldContainer = document.querySelectorAll(".ingredient");
 
-  // Realiza um clone do último ingrediente adicionado
+  // Realiza um clone do último preparo adicionado
   const newField = fieldContainer[fieldContainer.length - 1].cloneNode(true);
 
   // Não adiciona um novo input se o último tem um valor vazio
@@ -56,7 +56,6 @@ function addIngredient() {
 document
   .querySelector(".add-ingredient")
   .addEventListener("click", addIngredient);
-
 
 //Função de adicionar novo input nos itens modo de preparo
 function addPreparo() {

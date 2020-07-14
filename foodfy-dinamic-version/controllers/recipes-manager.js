@@ -7,7 +7,36 @@ exports.index = (req, res) => {
 }
 //Create
 exports.create = (req, res) => {
-  return res.render('manager/create'); 
+  return res.render('manager/create');
+}
+//Post
+exports.post = (req, res) => {
+  //Validação todos os campos obrigatórios
+  const keys = Object.keys(req.body)
+
+  for (const key of keys) {
+    if (req.body[key] == "")
+      return res.send("Por gentileza preencha todos os campos!")
+  }
+
+  let id = 1;
+  const lastRecipe = data.recipes[data.recipes.length - 1];
+
+  if (lastRecipe) {
+    id = Number(lastRecipe.id + 1);
+  }
+
+  data.recipes.push({
+    id,
+    ...req.body
+  });
+
+  fs.writeFile('file-system/data.json', JSON.stringify(data, null, 2), (err) => {
+    if (err) return res.send('Erro ao salvar o arquivo!');
+
+    return res.redirect(`/admin/receitas/${id}`);
+  });
+
 }
 //Show
 exports.show = (req, res) => {
@@ -40,42 +69,6 @@ exports.edit = (req, res) => {
   }
 
   return res.render('manager/edit', { recipe });
-}
-//Post
-exports.post = (req, res) => {
-  //Validação todos os campos obrigatórios
-  const keys = Object.keys(req.body)
-
-  for (const key of keys) {
-    if (req.body[key] == "")
-      return res.send("Por gentileza preencha todos os campos!")
-  }
-
-  let { image, title, author, ingredients, preparation, information } = req.body;
-
-  let id = 1;
-  const lastMember = data.members[data.members.length - 1];
-
-  if (lastMember) {
-    id = Number(lastMember.id + 1);
-  }  
-
-  data.recipes.push({
-    id,
-    image, 
-    title, 
-    author, 
-    ingredients, 
-    preparation, 
-    information
-  });
-
-  fs.writeFile('file-system/data.json', JSON.stringify(data, null, 2), (err) => {
-    if (err) return res.send('Erro ao salvar o arquivo!');
-
-    return res.redirect(`admin/receitas/${id}`);
-  });
-
 }
 //Put
 exports.put = (req, res) => {
