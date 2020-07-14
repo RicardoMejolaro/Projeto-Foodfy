@@ -37,6 +37,17 @@ for (const link of linkView) {
   });
 }
 
+//Lógica confirmação de deletar
+const formDelete = document.querySelector("#form-delete");
+formDelete.addEventListener("submit", (event) => {
+  const confirmation = confirm("Deseja realmente deletar?");
+  if(!confirmation) {
+    event.preventDefault();
+  } else {
+    alert("Registro deletado com sucesso!");
+  }
+});
+
 //Função de adicionar novo input nos ingredients
 function addIngredient() {
   const ingredients = document.querySelector("#ingredients");

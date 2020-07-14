@@ -18,5 +18,6 @@ routes.get("/admin/receitas/:id/edit", recipesManager.edit); // Mostrar formulá
 
 routes.post("/admin/receitas", recipesManager.post);//Criar uma receita
 routes.put("/admin/receitas", recipesManager.put); // Editar uma receita
+routes.delete("/admin/receitas", recipesManager.delete); // Deletar uma receita
 
 module.exports = routes;
