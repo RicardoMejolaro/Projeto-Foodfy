@@ -1,82 +1,59 @@
 <h1 align=center>
-<img src="foodfy-dinamic-version/public/assets/logo-launchbase.svg" alt="Bootcamp LaunchBase" width="350px">
-<h2 align=center><strong>Readme Versão Foodfy Dinâmico<strong></h2>
-</h1>
-
-<h4 align="center"> 
-🚀 Site Foodfy com backend 🚀 <br/> 🚀 Done! ✔️
-</h4>
+<img src="public/assets/logo.png" alt="Logo foodfy" width="350px">
 
 ---
+
+✔️ Site de Receitas com backend e gerenciador de receitas ✔️
+</h1>
 
 ## 📑️ Índice
 
-- [Bootcamp LaunchBase](#ℹ️-O-que-é-o-LaunchBase)
 - [O projeto](#📝️-Sobre)
+- [Links desafios](#📝️-Links)
 - [Tecnologias utilizadas](#🚀️-Tecnologias-utilizadas)
 - [Acrescentado ao projeto original](#💻️-Acrescentado-ao-projeto-original)
 - [Como usar](#💾️-Como-baixar/testar-o-projeto)
-- [Contato](#-Desenvolvido-por:)
+- [Bootcamp LaunchBase](#ℹ️-O-que-é-o-LaunchBase)
+- [Contato](#-Desenvolvido-com-💙️-por)
+- [Licença](#-Licença)
 
 ---
-
-## ℹ️ O que é o LaunchBase?
-
-O LaunchBase é um treinamento no formato de bootcamp online que tem duração de 8 semanas. A cada semana os conteúdos são liberados de acordo com um cronograma, guiando o aluno pelas ferramentas e conceitos mais modernos de desenvolvimento web para entrar com o pé direito nesse universo e ir direto ao ponto naquilo que realmente importa para alcançar seus maiores objetivos como dev..
-
-### Módulo Front-end
-
-<h4>Link do desafio</h4>
-<a href="https://github.com/Rocketseat/bootcamp-launchbase-desafios-03/blob/master/desafios/03-refatorando-foodfy.md" target="_blank">Acessar</a>
-
-<h2>Página inicial</h2>
-<ul>
-  <li>Menu para três páginas</li>
-  <li>Banner</li>
-  <li>Receitas mais acessadas</li>
-  <li>Rodapé</li>
-</ul>
-
-<h2>Página sobre</h2>
-<ul>
-  <li>Menu para três páginas</li>
-  <li>Sobre</li>
-  <li>História</li>
-  <li>Descrição</li>
-  <li>Rodapé</li>
-</ul>
-
-<h2>Página receitas</h2>
-<ul>
-  <li>Menu para três páginas</li>
-  <li>Receitas</li>
-  <li>Rodapé</li>
-</ul>
-
-<h2>Página receitas completas</h2>
-<ul>
-  <li>Menu para três páginas</li>
-  <li>Receitas completas</li>
-  <li>Rodapé</li>
-</ul>
-
----
-
-<h1 align=center>
-<img src="foodfy-dinamic-version/public/assets/logo.png" alt="Foodfy logo" width="150">
-</h1>
-
-<h1>
-<img src="foodfy-dinamic-version/public/assets/foodfy.gif" alt="Gif demonstrativo Foodfy">
-</h1>
 
 ## 📝️ Sobre
 
-O projeto trata-se de um site de receitas criados para consolidar o aprendizado
-durante o módulo backend do curso, onde deve-se utilizar HTML, CSS, JavaScript,
-NodeJS, Express, Template Engine Nunjucks contendo menus, página sobre, página
-receitas cards e apresentação em nova página com os detalhes completos da
-receita ao clicar.
+O projeto trata-se de uma série de desafios apresentandos durante o Bootcamp. 
+Onde eu precisava criar um site de receitas, utilizando as tecnologias HTML, CSS, 
+JavaScript, NodeJS, Express, Template Engine Nunjucks contendo menus, página sobre, 
+página receitas cards e apresentação em nova página com os detalhes completos da
+receita ao clicar. Criar também um administrador do site, contendo opções de, 
+Cadastrar, Visualizar, Editar e excluir receitas, totalmente integrada com o front-end.
+
+## Apresentação do Site
+
+<h1>
+<img src="public/assets/foodfy-site.gif" alt="Foodfy Site Gif">
+</h1>
+
+---
+
+## Apresentação do Gerenciador
+
+<h1>
+<img src="public/assets/foodfy-admin.gif" alt="Foodfy Site Admin Gif">
+</h1>
+
+## Links
+<ol>
+<li>
+<a href="https://github.com/Rocketseat/bootcamp-launchbase-desafios-02/blob/master/desafios/02-foodfy.md">CONSTRUINDO O SITE</a>
+</li>
+<li>
+<a href="https://github.com/Rocketseat/bootcamp-launchbase-desafios-03/blob/master/desafios/03-refatorando-foodfy.md" target="_blank">REFATORANDO O SITE</a>
+</li>
+<li>
+<a href="https://github.com/Rocketseat/bootcamp-launchbase-desafios-04/blob/master/desafios/04-admin-foodfy.md" target="_blank">CONSTRUINDO O ADMINISTRADOR DO SITE</a>
+</li>
+</ol>
 
 ---
 
@@ -89,6 +66,7 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias:
 - JavaScript
 - NodeJS
 - Express
+- Fs
 - Template Engine Nunjucks
 
 ---
@@ -96,6 +74,8 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias:
 ## 💻️ Acrescentado ao projeto proposto
 
 - Responsividade com media query baseado no toogle device toolbar do chrome.
+- Menu dinâmico.
+- Estilizações próprias.
 
 ---
 
@@ -119,27 +99,37 @@ $ npm -v
 $ git clone https://github.com/RicardoMejolaro/Projeto-Foodfy.git
 
 #Entrar no diretório
-$ cd foodfy-dinamic-version
+$ cd foodfy
 
 #Abrir projeto no VsCode ou com seu prompt de comando de preferência
-code . ||  cd foodfy-dinamic-version (Passo acima) 
+code . ||  cd foodfy (Passo acima) 
 
 #Com o terminal aberto rodar o comando
-$ npm install para instalar as dependências necessárias
+$ npm install (para instalar as dependências necessárias)
 
 #Agora só rodar o projeto com o comando
 $ npm start
 
-#E abrir em seu navegador de preferência o caminho
-localhost:5000
+#Pronto projeto abrirá em seu navegador padrão
+Agora é só testar em seu navegador!
 
 ```
 ---
 
-#### Desenvolvido por:
+## ℹ️ O que é o LaunchBase?
+
+O LaunchBase é um treinamento no formato de bootcamp online que tem duração de 8 semanas. A cada semana os conteúdos são liberados de acordo com um cronograma, guiando o aluno pelas ferramentas e conceitos mais modernos de desenvolvimento web para entrar com o pé direito nesse universo e ir direto ao ponto naquilo que realmente importa para alcançar seus maiores objetivos como dev..
+
+---
+
+### Desenvolvido com 💙️ por
 
 ***Ricardo Mejolaro*** 
 <br/> 
 <a href="https://www.linkedin.com/in/ricardo-mejolaro/">
-<img src="foodfy-dinamic-version/public/assets/linkedin.png">
+<img src="public/assets/linkedin.png">
 </a>
+
+### Licença
+
+Este projeto está licenciado sob a licença MIT - consulte a página [LICENSE](https://opensource.org/licenses/MIT) para obter detalhes.
