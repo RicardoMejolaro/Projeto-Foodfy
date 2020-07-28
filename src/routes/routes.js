@@ -1,7 +1,7 @@
 const express = require('express');
 const routes = express.Router();
-const recipes = require('../controllers/recipes-aplication');
-const recipesManager = require('../controllers/recipes-manager');
+const recipes = require('../../src/app/controllers/recipes-aplication');
+const recipesManager = require('../../src/app/controllers/recipes-aplication');
 
 
 //Rotas Aplicação

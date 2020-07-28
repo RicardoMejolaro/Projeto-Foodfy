@@ -4,7 +4,9 @@ const routes = require('./routes/routes');
 const methodOverride = require('method-override');
 
 //Iniciando o servidor
-const server = express();server.use(express.urlencoded({ extended: true}));
+const server = express();
+
+server.use(express.urlencoded({ extended: true}));
 //Definindo os arquivos estáticos da aplicação
 server.use(express.static('public'));
 //Configurando método override
@@ -16,7 +18,7 @@ server.use(routes);
 server.set('view engine', 'njk');
 
 //Configurações da template engine nunjucks
-nunjucks.configure('views', {
+nunjucks.configure('src/app/views', {
   express: server,
   autoescape: false,
   noCache: true
