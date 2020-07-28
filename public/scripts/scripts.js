@@ -2,11 +2,12 @@
 const currentPage = location.pathname;
 const menuItems = document.querySelectorAll('header .links a');
 
-for (const item of menuItems) {
-  if (currentPage.includes(item.getAttribute('href'))) {
-    item.classList.add("active")
+  for (const item of menuItems) {
+    if (currentPage.includes(item.getAttribute('href'))) {
+      item.classList.add("active")
+    }
   }
-}
+
 
 //Lógica clica no card da página revenue e redireciona para uma nova página
 //com os detalhes da receita clicada
@@ -49,14 +50,17 @@ for (const link of linkView) {
 
 //Lógica confirmação de deletar
 const formDelete = document.querySelector("#form-delete");
-formDelete.addEventListener("submit", (event) => {
-  const confirmation = confirm("Deseja realmente deletar?");
-  if(!confirmation) {
-    event.preventDefault();
-  } else {
-    alert("Registro deletado com sucesso!");
-  }
-});
+
+if (formDelete) {
+  formDelete.addEventListener("submit", (event) => {
+    const confirmation = confirm("Deseja realmente deletar?");
+    if(!confirmation) {
+      event.preventDefault();
+    } else {
+      alert("Registro deletado com sucesso!");
+    }
+  });
+}
 
 //Função de adicionar novo input nos ingredients
 function addIngredient() {
@@ -74,9 +78,12 @@ function addIngredient() {
   ingredients.appendChild(newField);
 }
 
-document
-  .querySelector(".add-ingredient")
-  .addEventListener("click", addIngredient);
+const clickIngredient = document.querySelector(".add-ingredient")
+
+if (clickIngredient) {
+  clickIngredient.addEventListener("click", addIngredient);
+}
+  
 
 //Função de adicionar novo input nos itens modo de preparo
 function addPreparo() {
@@ -94,9 +101,11 @@ function addPreparo() {
   preparos.appendChild(newField);
 }
 
-document
-  .querySelector(".add-preparo")
-  .addEventListener("click", addPreparo);
+const clickPreparo = document.querySelector(".add-preparo")
+if (clickPreparo) {
+  clickPreparo.addEventListener("click", addPreparo);
+}
+  
 
 
 

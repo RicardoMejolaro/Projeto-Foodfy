@@ -1,4 +1,4 @@
-const data = require('../file-system/data.json');
+const data = require('../../../file-system/data.json');
 
 //Index Aplicação
 exports.index = (req, res) => {

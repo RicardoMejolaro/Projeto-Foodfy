@@ -1,5 +1,5 @@
 const fs = require("fs");
-const data = require('../file-system/data.json');
+const data = require('../../../file-system/data.json');
 
 //Index
 exports.index = (req, res) => {
