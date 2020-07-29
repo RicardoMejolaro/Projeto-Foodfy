@@ -13,7 +13,8 @@ body {
 
 header {
   width: 100%;
-  margin-top: 30px;
+  margin-bottom: 30px;
+  background-color: #EEEEEE;
 }
 
 div.menu {
@@ -21,6 +22,7 @@ div.menu {
   height: 70px;
   margin: 0 16%;
   position: relative;
+  align-items: center;
 }
 
 div.links {  
@@ -36,13 +38,16 @@ div.links a {
 }
 
 div.admin a{
-  background-color: #111111;
-  color: #FFF;
+  background-color: #FFF;
+  color: #111111;
+  font-weight: bold;
   padding: 8px 16px;
   border-radius: 8px;
   position: absolute;
   right: 0;
+  top: 20px;
   text-decoration: none;
+  text-transform: uppercase;
 }
 
 div.links a:hover {
@@ -165,14 +170,18 @@ div.container-about {
 div.container-about h2 {
   font-size: 24px;
   line-height: 28px;
+  margin: 10px;
 }
 
 div.container-about h3 {
-  margin-top: 10px;
+  margin: 10px;
 }
 
 div.about {
   max-width: 940px;
+  background-color: #eee;
+  padding: 5px 20px;
+  border-radius: 16px;
 }
 
 div.about p{
@@ -180,6 +189,7 @@ div.about p{
   font-size: 18px;
   line-height: 28px;
   margin: 20px 0;
+  text-align: justify;
 }
 
 /*======Recipe-page=======*/

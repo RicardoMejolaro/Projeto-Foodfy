@@ -4,16 +4,16 @@
     <header>
       <div class="menu">
         <div class="logo">
-          <a href="/">
+          <a href="/foodfy">
             <img src="/assets/logo.png" alt="Logo foodfy">
           </a>
         </div>
         <div class="links">
-          <a href="/sobre">Sobre</a>
-          <a href="/receitas">Receitas</a>
+          <a href="/foodfy/sobre">Sobre</a>
+          <a href="/foodfy/receitas">Receitas</a>
         </div>
         <div class="admin">
-          <a href="/admin/receitas">Administrador</a>
+          <a href="/foodfy/admin/receitas">Admin</a>
         </div>
       </div>
     </header>
@@ -37,7 +37,7 @@
   </div>
 
   <div class="recipe">
-    <h2>Receitas em destaque</h2>
+    <h2>Sugestões de receitas</h2>
     <div class="cards">
       {% for recipe in recipes %}
         <div class="card-index">

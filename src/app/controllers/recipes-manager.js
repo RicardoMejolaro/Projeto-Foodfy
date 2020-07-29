@@ -1,6 +1,30 @@
-const fs = require("fs");
-const data = require('../../../file-system/data.json');
+const Recipes = require('../models/Recipes');
 
+module.exports = {
+  index(req, res) {  
+    Recipes.all(function(recipes) {
+      return res.render('manager/recipes/index', { recipes });
+    });
+  },
+  show(req, res) {
+    Recipes.find(req.params.id, (recipe) => {
+      if (!recipe) return res.send('Receita não localizada!');
+
+      return res.render('manager/recipes/show', { recipe });
+    });   
+  }
+}
+
+
+
+
+
+
+
+
+
+
+/*
 //Index
 exports.index = (req, res) => {
   return res.render('manager/recipes/index', { recipes: data.recipes });
@@ -37,22 +61,6 @@ exports.post = (req, res) => {
     return res.redirect(`/admin/receitas/${id}`);
   });
 
-}
-//Show
-exports.show = (req, res) => {
-  const { id } = req.params
-
-  const foundRecipe = data.recipes.find((recipe) => {
-    return recipe.id == id;
-  });
-
-  if (!foundRecipe) return res.send('Receita não encontrada!');
-
-  const recipe = {
-    ...foundRecipe
-  }
-
-  return res.render('manager/recipes/show', { recipe });
 }
 //Edit
 exports.edit = (req, res) => {
@@ -115,4 +123,4 @@ exports.delete = (req, res) => {
     return res.redirect('/admin/receitas');
 
   });
-}
+}*/

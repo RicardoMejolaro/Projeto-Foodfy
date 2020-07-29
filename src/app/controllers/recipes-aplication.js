@@ -1,31 +1,31 @@
-const data = require('../../../file-system/data.json');
+const Recipes = require('../models/Recipes');
 
-//Index Aplicação
-exports.index = (req, res) => {
-  let recipes = [];
-  for (let i = 0; i < 6; i++) { 
-    recipes.push(data.recipes[i])
-  }     
+module.exports = {
+  index(req, res) {
+    let recipes = [];
+  
+    Recipes.all(function(recipesNew) {
+      for (let i = 0; i < 6; i++) { 
+        recipes.push(recipesNew[i])
+      }   
+      return res.render('aplication/index', { recipes });
+    });
+  },
+  about(req, res) {
+    return res.render('aplication/about');
+  },
+  recipes(req, res) {
+    Recipes.all(function(recipes) {
+       return res.render('aplication/revenue', { recipes });
+    });
+  },
+  recipe(req, res) {
+    Recipes.find(req.params.id, (recipe) => {
+      if (!recipe) return res.send('Receita não localizada!');
 
-return res.render('aplication/index', { recipes });
+      return res.render('aplication/watch-recipe-details', { recipe })
+    });   
+  
+  },
 }
-//Página Sobre Aplicação
-exports.about = (req, res) => {
-  return res.render('aplication/about');
-}
-//Página Receitas Aplicação
-exports.recipes = (req, res) => {
-  return res.render('aplication/revenue', { recipes: data.recipes });
-}
-//Página Detalhes Receita Aplicação
-exports.recipe = function (req, res) {
-  const recipeIndex = req.params.id;
 
-  const recipe = data.recipes.find(recipe => recipe.id == recipeIndex);
-
-  if (!recipe) {
-    return res.send("Receita não encontrada!");
-  }
-
-  return res.render('aplication/watch-recipe-details', { recipe })
-}

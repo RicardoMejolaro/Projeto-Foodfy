@@ -6,20 +6,23 @@ const chefsManager = require('../../src/app/controllers/chefs-manager');
 
 
 //Rotas Aplicação
-routes.get('/', recipes.index);
-routes.get('/sobre', recipes.about);
-routes.get('/receitas', recipes.recipes);
-routes.get("/receitas/:id", recipes.recipe);
+routes.get('/', (req, res) => {
+  res.redirect('/foodfy')
+})
+routes.get('/foodfy', recipes.index);
+routes.get('/foodfy/sobre', recipes.about);
+routes.get('/foodfy/receitas', recipes.recipes);
+routes.get('/foodfy/receitas/:id', recipes.recipe);
 
 //Rotas Administrador da aplicação - Receitas
 routes.get("/admin/receitas", recipesManager.index); // Mostrar a lista de receitas
-routes.get("/admin/receitas/create", recipesManager.create); // Cadastrar nova receita
+/*routes.get("/admin/receitas/create", recipesManager.create); // Cadastrar nova receita*/
 routes.get("/admin/receitas/:id", recipesManager.show); // Exibir detalhes de uma receita
-routes.get("/admin/receitas/:id/edit", recipesManager.edit); // Mostrar formulário de edição de receita
+/*routes.get("/admin/receitas/:id/edit", recipesManager.edit); // Mostrar formulário de edição de receita
 routes.post("/admin/receitas", recipesManager.post);//Criar uma receita
 routes.put("/admin/receitas", recipesManager.put); // Editar uma receita
 routes.delete("/admin/receitas", recipesManager.delete); // Deletar uma receita
-
+*/
 //Rotas Administrador da aplicação -Chefs
 routes.get("/admin/chefs", chefsManager.index); // Mostrar a lista de chefs
 routes.get("/admin/chefs/create", chefsManager.create); // Cadastrar novo chef
