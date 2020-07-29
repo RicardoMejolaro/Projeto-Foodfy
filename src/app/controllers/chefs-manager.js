@@ -7,7 +7,7 @@ exports.index = (req, res) => {
 }
 //Create
 exports.create = (req, res) => {
-  return res.render('manager/recipes/create');
+  return res.render('manager/chefs/create');
 }
 //Post
 exports.post = (req, res) => {

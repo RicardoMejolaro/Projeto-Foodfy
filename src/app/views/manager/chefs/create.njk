@@ -1,0 +1,44 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+  <title>Novo Chef</title>
+{% endblock %}
+
+{% block header %}
+  <header class="header-manager">
+    <div class="menu-manager">
+      <div class="logo-manager">
+        <a href="/admin/receitas">
+          <img src="/assets/logo-manager.png" alt="Logo foodfy">
+        </a>
+      </div>
+    </div>
+  </header>
+{% endblock %}
+
+{% block content %}
+  <section class="details">
+
+    <form method="POST" action="/admin/chefs">
+
+      <h3>Criando Chef</h3>
+
+      <div class="item">
+        <div>Avatar</div>
+        <div>
+          <input type="text" name="avatar_url" placeholder="http://" value="">
+        </div>
+      </div>
+
+      <div class="item">
+        <div>Nome</div>
+        <div>
+          <input type="text" name="name" value="">
+        </div>
+      </div>
+
+      <button class="edit" type="submit">Salvar Chef</button>
+    </form>
+
+  </section>
+{% endblock %}
