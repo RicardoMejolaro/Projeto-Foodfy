@@ -1,7 +1,7 @@
 {% extends "layout.njk" %}
 
 {% block head %}
-  <title>Novo Chef</title>
+  <title>Editar Chef</title>
 {% endblock %}
 
 {% block header %}
@@ -23,25 +23,33 @@
 {% block content %}
   <section class="details">
 
-    <form method="POST" action="/admin/chefs">
+    <form method="POST" action="/admin/chefs?_method=PUT">
 
-      <h3>Criando Chef</h3>
+      <h3>Editando Chef</h3>
 
       <div class="item">
         <div>Avatar</div>
         <div>
-          <input type="text" name="avatar_url" placeholder="http://" value="">
+          <input type="text" name="avatar_url" placeholder="http://" value="{{ recipe.image }}">
         </div>
       </div>
 
       <div class="item">
         <div>Nome</div>
         <div>
-          <input type="text" name="name" value="">
+          <input type="text" name="name" value="{{ recipe.title }}">
         </div>
       </div>
 
+      <input type="hidden" name="id" value="{{ recipe.id }}">
+
       <button class="edit" type="submit">Salvar Chef</button>
+    </form>
+
+    <form id="form-delete" method="POST" action="/admin/receitas?_method=DELETE">
+      <input type="hidden" name="id" value="{{ recipe.id }}">
+
+      <button class="edit" type="submit">Deletar</button>
     </form>
 
   </section>

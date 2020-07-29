@@ -68,7 +68,7 @@ exports.edit = (req, res) => {
     ...foundRecipe,
   }
 
-  return res.render('manager/recipes/edit', { recipe });
+  return res.render('manager/chefs/edit', { recipe });
 }
 //Put
 exports.put = (req, res) => {
