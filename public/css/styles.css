@@ -539,7 +539,7 @@ button[type="submit"]:hover {
 }
 
 /*==========CHEFS MANAGER============*/
-div.recipe-manager-chef {
+div.chef-manager {
   max-width: 80%;
   margin: 0 16%;
 }
@@ -598,4 +598,79 @@ div.info-card-manager-chef a:hover {
   opacity: 0.8;
 }
 
+/*==============DETAILS CHEFS==============*/
+div.chef-page-details {
+  max-width: 70%;
+  margin: 0 0 100px 16%;
+  text-align: center;
+}
+
+div.chef-details img{
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin: 5px 0 50px 0;
+}
+
+div.info-chef-details span {
+  font-size: 36px;
+  line-height: 42px;
+  font-weight: bold;
+}
+
+div.info-chef-details p {
+  color: #777777;
+  font-size: 20px;
+  line-height: 24px;
+  margin-bottom: 50px;
+  margin-top: 10px;
+}
+
+div.cards-chef {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  margin: 30px 0 100px 0;
+}
+
+div.card-chef {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  height: 100px;
+}
+
+div.card-chef img {
+  width: 172px;
+  height: 80px;
+  border-radius: 15px;
+}
+
+div.info-card-chef span {
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: bold;
+}
+
+div.info-card-chef p {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: bold;
+  margin-top: 10px;
+  opacity: 0.5;
+}
+
+div.info-card-chef a {
+  font-size: 14px;
+  line-height: 16px;
+  color: #6558C3;
+  font-weight: bold;
+  margin-top: 10px;
+  display: inline-block;
+  text-decoration: none;
+}
+
+div.info-card-chef a:hover {
+  opacity: 0.8;
+}
 

@@ -52,7 +52,7 @@ exports.show = (req, res) => {
     ...foundRecipe
   }
 
-  return res.render('manager/recipes/show', { recipe });
+  return res.render('manager/chefs/show', { recipe });
 }
 //Edit
 exports.edit = (req, res) => {
