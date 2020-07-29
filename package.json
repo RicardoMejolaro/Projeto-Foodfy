@@ -1,6 +1,6 @@
 {
-  "name": "foodfy-dinamic-version",
-  "version": "1.0.0",
+  "name": "foodfy",
+  "version": "1.1.1",
   "description": "Seu site de receitas",
   "main": "server.js",
   "scripts": {

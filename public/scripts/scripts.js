@@ -8,6 +8,14 @@ const menuItems = document.querySelectorAll('header .links a');
     }
   }
 
+const menuManager = document.querySelectorAll('header .links-manager a');
+
+  for (const item of menuManager) {
+    if (currentPage.includes(item.getAttribute('href'))) {
+      item.classList.add("active")
+    }
+  }
+
 
 //Lógica clica no card da página revenue e redireciona para uma nova página
 //com os detalhes da receita clicada

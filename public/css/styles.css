@@ -290,52 +290,46 @@ div.content-recipe-details p {
 header.header-manager {
   width: 100%;
   margin: 0;
+  box-sizing: border-box;
 }
 
 div.menu-manager {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   width: 100%;
   height: 80px;
   background-color: #111111;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+
 }
 
 div.logo-manager {
-  display: flex;
-  margin: auto 16%;
+  margin-left: 16%;
+
 }
 
-div.admin-manager {
-  margin: auto 16%;
+div.links-manager {
+  margin-left: 50px;
 }
 
-div.admin-manager a{
-  background-color: #FFF;
-  color: #6558C3;
-  padding: 8px 16px;
-  border-radius: 8px;
+div.links-manager a {
+  color: #999999;
+  font-size: 15px;
+  line-height: 25px;
   text-decoration: none;
-  font-weight: bold;
-  text-align: center;
+  text-transform: uppercase;
 }
 
-div.site-manager {
-  margin: auto 16%;
+div.links-manager a + a {
+  margin-left: 20px;
 }
 
-div.site-manager a{
-  background-color: #FFF;
-  color: #6558C3;
-  padding: 8px 16px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-  text-align: center;
+div.links-manager a:hover {
+  color: #FFF;
 }
 
-div.admin-manager a:hover {
-  opacity: 0.5;
+div.links-manager .active {
+  color: #FFF;
 }
 
 div.cards-manager {
@@ -423,8 +417,7 @@ div.title-button-manager a.button {
 }
 
 div.recipe-manager {
-  max-width: 940px;
-  border-radius: 30px;
+  max-width: 80%;
   margin: 0 16%;
 }
 
@@ -543,6 +536,66 @@ button[type="submit"]:hover {
   right: 180px;
   top: 60px;
   margin-right: 10px;
+}
+
+/*==========CHEFS MANAGER============*/
+div.recipe-manager-chef {
+  max-width: 80%;
+  margin: 0 16%;
+}
+
+div.cards-manager-chef {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 30px;
+  margin-top: 32px;
+  box-sizing: border-box;
+}
+
+div.card-manager-chef {
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+}
+
+div.card-manager-chef div {
+  margin-left: 15px;
+  width: 105px;
+}
+
+div.card-manager-chef img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+}
+
+div.info-card-manager-chef {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+div.info-card-manager-chef span {
+  color: #111111;
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+div.info-card-manager-chef a {
+  font-size: 14px;
+  line-height: 16px;
+  color: #6558C3;
+  font-weight: bold;
+  display: inline-block;
+  text-decoration: none;
+}
+
+div.info-card-manager-chef a:hover {
+  opacity: 0.8;
 }
 
 

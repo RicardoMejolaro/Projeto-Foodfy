@@ -3,7 +3,7 @@ const data = require('../../../file-system/data.json');
 
 //Index
 exports.index = (req, res) => {
-  return res.render('manager/recipes/index', { recipes: data.recipes });
+  return res.render('manager/chefs/index', { recipes: data.recipes });
 }
 //Create
 exports.create = (req, res) => {

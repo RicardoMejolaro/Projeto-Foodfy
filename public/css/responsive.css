@@ -127,6 +127,33 @@ div.info-card-manager {
   text-align: center;
 }
 
+/*========PAGE INDEX MANAGER CHEFS======*/
+div.recipe-manager-chef {
+  max-width: 80%;
+  margin: 32px auto 100px auto;
+}
+
+div.cards-manager-chef {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+div.card-manager-chef {
+  display: grid;
+  grid-template: 64px 1fr;
+  align-items: right;
+  border-bottom: 2px solid #eee;
+  width: 100%;
+}
+
+div.info-card-manager-chef {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+
 /*==========Page Show Manager======*/
 div.title-button {
   margin: auto;
@@ -233,6 +260,55 @@ div.info-card-manager span {
 }
 
 }
+
+@media(min-width: 300px) and (max-width: 450px) {
+
+  /*========PAGE INDEX MANAGER CHEFS======*/
+  div.recipe-manager-chef {
+    max-width: 80%;
+    margin: 32px auto 100px auto;
+  }
+  
+  div.cards-manager-chef {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 32px 32px;
+  }
+  
+  div.card-manager-chef {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-bottom: 2px solid #eee;
+    align-items: center;
+  }
+  
+  div.card-manager-chef img {
+    width: 70%;
+    height: 80%;
+    margin-left: 30px;
+  }
+  
+}
+
+@media (min-width: 640px) and (max-width: 900px) {
+
+/*========PAGE INDEX MANAGER CHEFS======*/
+div.cards-manager-chef {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+}
+
+@media (min-width: 900px) and (max-width: 1050px) {
+
+  /*========PAGE INDEX MANAGER CHEFS======*/
+  div.cards-manager-chef {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  
+  }
 
 
 
