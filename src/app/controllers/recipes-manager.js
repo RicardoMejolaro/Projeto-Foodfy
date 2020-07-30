@@ -1,3 +1,4 @@
+const { date } = require('../../lib/utils');
 const Recipes = require('../models/Recipes');
 
 module.exports = {
@@ -6,16 +7,80 @@ module.exports = {
       return res.render('manager/recipes/index', { recipes });
     });
   },
+  create(req, res) {
+    return res.render('manager/recipes/create');
+  },
+  post(req, res) {
+    //Validação todos os campos obrigatórios
+    const keys = Object.keys(req.body)
+  
+    for (const key of keys) {
+      if (req.body[key] == "")
+        return res.send("Por gentileza preencha todos os campos!")
+    }
+
+    const { chef_id, image, title, ingredients, preparation, information, author } = req.body;
+
+    const data = [
+      chef_id,
+      image,
+      title,
+      ingredients,
+      preparation,
+      information,
+      author,
+      date(Date.now()).iso
+    ];
+    
+    Recipes.create(data, (recipe) => {
+      return res.redirect(`/admin/receitas/${recipe.id}`);
+    });
+  
+  },
   show(req, res) {
     Recipes.find(req.params.id, (recipe) => {
       if (!recipe) return res.send('Receita não localizada!');
 
       return res.render('manager/recipes/show', { recipe });
     });   
-  }
+  },
+  edit(req, res) {
+    Recipes.find(req.params.id, (recipe) => {
+      if (!recipe) return res.send('Receita não localizada!');
+
+      return res.render('manager/recipes/edit', { recipe });
+    });   
+  },/*
+  put(req, res) {
+    //Validação todos os campos obrigatórios
+    const keys = Object.keys(req.body)
+
+    for (const key of keys) {
+      if (req.body[key] == "")
+        return res.send("Por gentileza preencha todos os campos!")
+    }
+
+    const { chef_id, image, title, ingredients, preparation, information, author, id } = req.body;
+    console.log(ingredients)
+
+    const data = [
+      chef_id,
+      image,
+      title,
+      ingredients,
+      preparation,
+      information,
+      author,
+      id
+    ];
+
+    console.log(ingredients)
+    
+    Recipes.update(data, () => {
+      return res.redirect(`/admin/receitas/${id}`);
+    });
+  },*/
 }
-
-
 
 
 
@@ -25,88 +90,6 @@ module.exports = {
 
 
 /*
-//Index
-exports.index = (req, res) => {
-  return res.render('manager/recipes/index', { recipes: data.recipes });
-}
-//Create
-exports.create = (req, res) => {
-  return res.render('manager/recipes/create');
-}
-//Post
-exports.post = (req, res) => {
-  //Validação todos os campos obrigatórios
-  const keys = Object.keys(req.body)
-
-  for (const key of keys) {
-    if (req.body[key] == "")
-      return res.send("Por gentileza preencha todos os campos!")
-  }
-
-  let id = 1;
-  const lastRecipe = data.recipes[data.recipes.length - 1];
-
-  if (lastRecipe) {
-    id = Number(lastRecipe.id + 1);
-  }
-
-  data.recipes.push({
-    id,
-    ...req.body
-  });
-
-  fs.writeFile('file-system/data.json', JSON.stringify(data, null, 2), (err) => {
-    if (err) return res.send('Erro ao salvar o arquivo!');
-
-    return res.redirect(`/admin/receitas/${id}`);
-  });
-
-}
-//Edit
-exports.edit = (req, res) => {
-  const { id } = req.params
-
-  const foundRecipe = data.recipes.find((recipe) => {
-    return recipe.id == id;
-  });
-
-  if (!foundRecipe) return res.send('Receita não encontrada!');
-
-  const recipe = {
-    ...foundRecipe,
-  }
-
-  return res.render('manager/recipes/edit', { recipe });
-}
-//Put
-exports.put = (req, res) => {
-  const { id } = req.body;
-  let index = 0;
-
-  const foundRecipe = data.recipes.find((recipe, foundIndex) => {
-    if (recipe.id == id) {
-      index = foundIndex;
-
-      return true
-    }
-  });
-
-  if (!foundRecipe) return res.send('Receita não encontrada!');
-
-  const recipe = {
-    ...foundRecipe,
-    ...req.body,
-    id: Number(req.body.id)
-  }
-
-  data.recipes[index] = recipe;
-
-  fs.writeFile('file-system/data.json', JSON.stringify(data, null, 2), (err) => {
-    if (err) return res.send('Erro ao salvar dados no arquivo!');
-
-    return res.redirect(`/admin/receitas/${id}`);
-  });
-}
 //Delete
 exports.delete = (req, res) => {
   const { id } = req.body

@@ -47,7 +47,7 @@
       <div class="item" id="ingredients">
         <div>Ingredientes</div>
         <div class="ingredient">
-          <input type="text" name="ingredients[]" placeholder="Incluir um ingrediente por vez" value="">
+          <input type="text" name="ingredients{}" placeholder="Incluir um ingrediente por vez" value="">
         </div>
       </div>
       <button type="button" class="add-ingredient" onclick="addIngredient()">Adicionar novo ingrediente</button>
@@ -55,7 +55,7 @@
       <div class="item" id="preparos">
         <div>Modo de preparo</div>
         <div class="preparo">
-          <input type="text" name="preparation[]" placeholder="Incluir um passo por vez" value="">
+          <input type="text" name="preparation{}" placeholder="Incluir um passo por vez" value="">
         </div>
       </div>
       <button type="button" class="add-preparo" onclick="addPreparo()">Adicionar novo passo</button>
