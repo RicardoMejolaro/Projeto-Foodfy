@@ -9,7 +9,7 @@
   <header class="header-manager">
     <div class="menu-manager">
       <div class="logo-manager">
-        <a href="/admin/receitas">
+        <a href="/foodfy/admin/receitas">
           <img src="/assets/logo-manager.png" alt="Logo foodfy">
         </a>
       </div>
@@ -21,7 +21,7 @@
   <div class="title-button">
     <h2>Receita:
       {{recipe.title}}</h2>
-    <a class="button" href="/admin/receitas/{{ recipe.id }}/edit ">Editar Receita</a>
+    <a class="button" href="/foodfy/admin/receitas/{{ recipe.id }}/edit ">Editar Receita</a>
   </div>
 
   <div class="recipe-page-details">
@@ -41,7 +41,9 @@
       <div class="content-recipe-details" id="ingredients">
         <ul>
           {% for ingredient in recipe.ingredients %}
-            <li>{{ingredient}}</li>
+            {% if ingredient != "" %}
+              <li>{{ingredient}}</li>
+            {% endif %}
           {% endfor %}
         </ul>
       </div>
@@ -54,9 +56,11 @@
       </div>
       <div class="content-recipe-details" id="preparation">
         <ol>
-        {% for preparation in recipe.preparation %}
-          <li>{{preparation}}</li>
-        {% endfor %}
+          {% for preparation in recipe.preparation %}
+            {% if preparation != "" %}
+              <li>{{preparation}}</li>
+            {% endif %}
+          {% endfor %}
         </ol>
       </div>
     </div>

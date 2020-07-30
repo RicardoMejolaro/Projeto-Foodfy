@@ -8,13 +8,13 @@
   <header class="header-manager">
     <div class="menu-manager">
       <div class="logo-manager">
-        <a href="/admin/receitas">
+        <a href="/foodfy/admin/receitas">
           <img src="/assets/logo-manager.png" alt="Logo foodfy">
         </a>
       </div>
       <div class="links-manager">
-        <a href="/admin/receitas">Receitas</a>
-        <a href="/admin/chefs">Chefs</a>
+        <a href="/foodfy/admin/receitas">Receitas</a>
+        <a href="/foodfy/admin/chefs">Chefs</a>
       </div>
     </div>
   </header>
@@ -25,7 +25,7 @@
   <div class="recipe-manager">
     <div class="title-button-manager">
       <h2>Gerenciar Receitas</h2>
-      <a class="button" href="/admin/receitas/create ">Nova Receita</a>
+      <a class="button" href="/foodfy/admin/receitas/create ">Nova Receita</a>
     </div>
 
     <div class="cards-manager">
@@ -35,7 +35,7 @@
           <div class="info-card-manager">
             <span>{{recipe.title}}</span>
             <p>{{recipe.author}}</p>
-            <a href="/admin/receitas/{{ recipe.id }}">Visualizar</a>
+            <a href="/foodfy/admin/receitas/{{ recipe.id }}">Visualizar</a>
           </div>
         </div>
       {% endfor %}

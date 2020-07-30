@@ -15,14 +15,14 @@ routes.get('/foodfy/receitas', recipes.recipes);
 routes.get('/foodfy/receitas/:id', recipes.recipe);
 
 //Rotas Administrador da aplicação - Receitas
-routes.get("/admin/receitas", recipesManager.index); // Mostrar a lista de receitas
-routes.get("/admin/receitas/create", recipesManager.create); // Cadastrar nova receita
-routes.get("/admin/receitas/:id", recipesManager.show); // Exibir detalhes de uma receita
-routes.get("/admin/receitas/:id/edit", recipesManager.edit); // Mostrar formulário de edição de receita
-routes.post("/admin/receitas", recipesManager.post);//Criar uma receita
-/*routes.put("/admin/receitas", recipesManager.put); // Editar uma receita
-routes.delete("/admin/receitas", recipesManager.delete); // Deletar uma receita
-*/
+routes.get("/foodfy/admin/receitas", recipesManager.index); // Mostrar a lista de receitas
+routes.get("/foodfy/admin/receitas/create", recipesManager.create); // Cadastrar nova receita
+routes.get("/foodfy/admin/receitas/:id", recipesManager.show); // Exibir detalhes de uma receita
+routes.get("/foodfy/admin/receitas/:id/edit", recipesManager.edit); // Mostrar formulário de edição de receita
+routes.post("/foodfy/admin/receitas", recipesManager.post);//Criar uma receita
+routes.put("/foodfy/admin/receitas", recipesManager.put); // Editar uma receita
+routes.delete("/foodfy/admin/receitas", recipesManager.delete); // Deletar uma receita
+
 //Rotas Administrador da aplicação -Chefs
 routes.get("/admin/chefs", chefsManager.index); // Mostrar a lista de chefs
 routes.get("/admin/chefs/create", chefsManager.create); // Cadastrar novo chef

@@ -8,7 +8,7 @@
   <header class="header-manager">
     <div class="menu-manager">
       <div class="logo-manager">
-        <a href="/admin/receitas">
+        <a href="/foodfy/admin/receitas">
           <img src="/assets/logo-manager.png" alt="Logo foodfy">
         </a>
       </div>
@@ -19,7 +19,7 @@
 {% block content %}
   <section class="details">
 
-    <form method="POST" action="/admin/receitas?_method=PUT">
+    <form method="POST" action="/foodfy/admin/receitas?_method=PUT">
 
       <h3>Editando Receita</h3>
 
@@ -49,7 +49,7 @@
         {% for ingredient in recipe.ingredients %}
           {% if ingredient != "" %}
             <div class="ingredient">
-              <input type="text" name="ingredients{}" placeholder="Incluir um ingrediente por vez" value="{{ ingredient }}">
+              <input type="text" name="ingredients[]" placeholder="Incluir um ingrediente por vez" value="{{ ingredient }}">
             </div>
           {% endif %}
         {% endfor %}
@@ -61,7 +61,7 @@
         {% for preparation in recipe.preparation %}
           {% if preparation != "" %}
             <div class="preparo">
-              <input type="text" name="preparation{}" placeholder="Incluir um passo por vez" value="{{ preparation }}">
+              <input type="text" name="preparation[]" placeholder="Incluir um passo por vez" value="{{ preparation }}">
             </div>
           {% endif %}
         {% endfor %}
@@ -80,7 +80,7 @@
       <button class="edit" type="submit">Salvar Receita</button>
     </form>
 
-    <form id="form-delete" method="POST" action="/admin/receitas?_method=DELETE">
+    <form id="form-delete" method="POST" action="/foodfy/admin/receitas?_method=DELETE">
       <input type="hidden" name="id" value="{{ recipe.id }}">
 
       <button class="edit" type="submit">Deletar</button>
