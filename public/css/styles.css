@@ -119,6 +119,7 @@ div.card-index {
   max-height: 140px;
   margin: 50px 0;
   cursor: pointer;
+  border: none;
 }
 
 div.card-index {
@@ -195,7 +196,6 @@ div.about p{
 /*======Recipe-page=======*/
 div.recipe-page {
   max-width: 940px;
-  border-radius: 30px;
   margin: 0 16%;
   margin-top: -50px;
 }
@@ -203,7 +203,6 @@ div.recipe-page {
 /*======Recipe Details Page=======*/
 div.recipe-page-details {
   max-width: 70%;
-  border-radius: 30px;
   margin: 0 0 100px 16%;
   text-align: center;
 }
@@ -478,6 +477,7 @@ div.title-button-manager h2 {
   line-height: 19px;
   color: #111111;
   font-weight: bold;
+  margin-bottom: 5px;
 }
 
 input,

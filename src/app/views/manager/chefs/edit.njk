@@ -8,13 +8,13 @@
   <header class="header-manager">
     <div class="menu-manager">
       <div class="logo-manager">
-        <a href="/admin/receitas">
+        <a href="foodfy/admin/receitas">
           <img src="/assets/logo-manager.png" alt="Logo foodfy">
         </a>
       </div>
       <div class="links-manager">
-        <a href="/admin/receitas">Receitas</a>
-        <a href="/admin/chefs">Chefs</a>
+        <a href="/foodfy/admin/receitas">Receitas</a>
+        <a href="/foodfy/admin/chefs">Chefs</a>
       </div>
     </div>
   </header>
@@ -23,31 +23,31 @@
 {% block content %}
   <section class="details">
 
-    <form method="POST" action="/admin/chefs?_method=PUT">
+    <form method="POST" action="/foodfy/admin/chef?_method=PUT">
 
       <h3>Editando Chef</h3>
 
       <div class="item">
         <div>Avatar</div>
         <div>
-          <input type="text" name="avatar_url" placeholder="http://" value="{{ recipe.image }}">
+          <input type="text" name="avatar_url" placeholder="http://" value="{{ chef.avatar_url }}">
         </div>
       </div>
 
       <div class="item">
         <div>Nome</div>
         <div>
-          <input type="text" name="name" value="{{ recipe.title }}">
+          <input type="text" name="name" value="{{ chef.name }}">
         </div>
       </div>
 
-      <input type="hidden" name="id" value="{{ recipe.id }}">
+      <input type="hidden" name="id" value="{{ chef.id }}">
 
       <button class="edit" type="submit">Salvar Chef</button>
     </form>
 
-    <form id="form-delete" method="POST" action="/admin/chefs?_method=DELETE">
-      <input type="hidden" name="id" value="{{ recipe.id }}">
+    <form id="form-delete" method="POST" action="/foodfy/admin/chef?_method=DELETE">
+      <input type="hidden" name="id" value="{{ chef.id }}">
 
       <button class="edit" type="submit">Deletar</button>
     </form>

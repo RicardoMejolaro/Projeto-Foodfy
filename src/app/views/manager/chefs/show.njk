@@ -9,13 +9,13 @@
   <header class="header-manager">
     <div class="menu-manager">
       <div class="logo-manager">
-        <a href="/admin/receitas">
+        <a href="/foodfy/admin/receitas">
           <img src="/assets/logo-manager.png" alt="Logo foodfy">
         </a>
       </div>
       <div class="links-manager">
-        <a href="/admin/receitas">Receitas</a>
-        <a href="/admin/chefs">Chefs</a>
+        <a href="/foodfy/admin/receitas">Receitas</a>
+        <a href="/foodfy/admin/chefs">Chefs</a>
       </div>
     </div>
   </header>
@@ -24,16 +24,16 @@
 {% block content %}
   <div class="title-button">
     <h2>Chef:
-      {{recipe.title}}</h2>
-    <a class="button" href="/admin/chefs/{{ recipe.id }}/edit ">Editar Chef</a>
+      {{chef.name}}</h2>
+    <a class="button" href="/foodfy/admin/chef/{{ chef.id }}/edit ">Editar Chef</a>
   </div>
 
   <div class="chef-page-details">
     <div class="chef-details">
-      <img src="{{recipe.image}}" alt="{{recipe.title}}">
+      <img src="{{chef.avatar_url}}" alt="{{chef.name}}">
       <div class="info-chef-details">
-        <span>{{recipe.title}}</span>
-        <p>{{recipe.author}} Receita(s)</p>
+        <span>{{chef.name}}</span>
+        <p>{{chef.total_recipes}} Receita(s)</p>
       </div>
     </div>
   </div>
@@ -41,39 +41,16 @@
   <div class="recipe">
     <h2>Receitas</h2>
     <div class="cards-chef">
-
+      {% for recipe in chefs.recipes_chef %}
       <div class="card-chef">
         <img src="/assets/chef.png" alt="{{recipe.title}}">
         <div class="info-card-chef">
           <span>{{recipe.title}}</span>
           <p>{{recipe.author}}</p>
-          <a href="/admin/receitas/{{ recipe.id }}">Visualizar</a>
+          <a href="/foodfy/admin/chef/{{ recipe.id }}">Visualizar</a>
         </div>
       </div>
-      <div class="card-chef">
-        <img src="/assets/chef.png" alt="{{recipe.title}}">
-        <div class="info-card-chef">
-          <span>{{recipe.title}}</span>
-          <p>{{recipe.author}}</p>
-          <a href="/admin/receitas/{{ recipe.id }}">Visualizar</a>
-        </div>
-      </div>
-      <div class="card-chef">
-        <img src="/assets/chef.png" alt="{{recipe.title}}">
-        <div class="info-card-chef">
-          <span>{{recipe.title}}</span>
-          <p>{{recipe.author}}</p>
-          <a href="/admin/receitas/{{ recipe.id }}">Visualizar</a>
-        </div>
-      </div>
-      <div class="card-chef">
-        <img src="/assets/chef.png" alt="{{recipe.title}}">
-        <div class="info-card-chef">
-          <span>{{recipe.title}}</span>
-          <p>{{recipe.author}}</p>
-          <a href="/admin/receitas/{{ recipe.id }}">Visualizar</a>
-        </div>
-      </div>
+      {% endfor %}
     </div>
   </div>
 

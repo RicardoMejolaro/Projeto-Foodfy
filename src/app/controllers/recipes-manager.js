@@ -33,7 +33,7 @@ module.exports = {
     ];
     
     Recipes.create(data, (recipe) => {
-      return res.redirect(`/foodfy/admin/receitas/${recipe.id}`);
+      return res.redirect(`/foodfy/admin/receita/${recipe.id}`);
     });
   
   },
@@ -74,7 +74,7 @@ module.exports = {
     ];
 
     Recipes.update(data, () => {
-      return res.redirect(`/foodfy/admin/receitas/${id}`);
+      return res.redirect(`/foodfy/admin/receita/${id}`);
     });
   },
   delete(req, res) {

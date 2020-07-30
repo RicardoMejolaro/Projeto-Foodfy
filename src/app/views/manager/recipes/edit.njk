@@ -19,7 +19,7 @@
 {% block content %}
   <section class="details">
 
-    <form method="POST" action="/foodfy/admin/receitas?_method=PUT">
+    <form method="POST" action="/foodfy/admin/receita?_method=PUT">
 
       <h3>Editando Receita</h3>
 
@@ -80,7 +80,7 @@
       <button class="edit" type="submit">Salvar Receita</button>
     </form>
 
-    <form id="form-delete" method="POST" action="/foodfy/admin/receitas?_method=DELETE">
+    <form id="form-delete" method="POST" action="/foodfy/admin/receita?_method=DELETE">
       <input type="hidden" name="id" value="{{ recipe.id }}">
 
       <button class="edit" type="submit">Deletar</button>
