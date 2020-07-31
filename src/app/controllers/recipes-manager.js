@@ -8,7 +8,10 @@ module.exports = {
     });
   },
   create(req, res) {
-    return res.render('manager/recipes/create');
+    Recipes.chefsSelectOptions((options) => {
+      return res.render('manager/recipes/create', { chefOptions: options });
+    });
+    
   },
   post(req, res) {
     //Validação todos os campos obrigatórios
@@ -19,7 +22,7 @@ module.exports = {
         return res.send("Por gentileza preencha todos os campos!")
     }
 
-    const { chef_id, image, title, ingredients, preparation, information, author } = req.body;
+    const { chef_id, image, title, ingredients, preparation, information } = req.body;
 
     const data = [
       chef_id,
@@ -28,7 +31,6 @@ module.exports = {
       ingredients,
       preparation,
       information,
-      author,
       date(Date.now()).iso
     ];
     
@@ -48,7 +50,10 @@ module.exports = {
     Recipes.find(req.params.id, (recipe) => {
       if (!recipe) return res.send('Receita não localizada!');
 
-      return res.render('manager/recipes/edit', { recipe });
+      Recipes.chefsSelectOptions((options) => {
+        return res.render('manager/recipes/edit', { recipe, chefOptions: options });;
+      });
+
     });   
   },
   put(req, res) {
@@ -60,7 +65,7 @@ module.exports = {
         return res.send("Por gentileza preencha todos os campos!")
     }
 
-    const { chef_id, image, title, ingredients, preparation, information, author, id } = req.body;
+    const { chef_id, image, title, ingredients, preparation, information, id } = req.body;
 
     const data = [
       chef_id,
@@ -69,7 +74,6 @@ module.exports = {
       ingredients,
       preparation,
       information,
-      author,
       id
     ];
 

@@ -12,6 +12,10 @@
           <img src="/assets/logo-manager.png" alt="Logo foodfy">
         </a>
       </div>
+      <div class="links-manager">
+        <a href="/foodfy/admin/receitas">Receitas</a>
+        <a href="/foodfy/admin/chefs">Chefs</a>
+      </div>
     </div>
   </header>
 {% endblock %}
@@ -31,16 +35,23 @@
       </div>
 
       <div class="item">
-        <div>Título da receita</div>
+        <div>Título</div>
         <div>
-          <input type="text" name="title" placeholder="Nome da receita" value="">
+          <input type="text" name="title" value="">
         </div>
       </div>
 
       <div class="item">
-        <div>Autor da receita</div>
+        <div>Chef - <span style="font-weight: normal">*(Caso o chefe não conste nas opções, cadastrá-lo antes em Chefs)</span></div>
         <div>
-          <input type="text" name="author" placeholder="Nome do autor" value="">
+          <select name="chef_id">
+            <option value="">Selecione</option>
+            {% for chef in chefOptions %}
+            <option value="{{ chef.id }}">
+              {{ chef.name }}
+            </option>{{ chef.name }}
+            {% endfor %}
+          </select>
         </div>
       </div>
 

@@ -490,6 +490,17 @@ textarea {
   outline: none;
   height: 25px;
   padding: 15px;
+  margin-bottom: 10px;
+}
+
+select {
+  color: #111111;
+  font-size: 16px;
+  line-height: 26px;
+  width: 100%;
+  border: 2px solid #DDDDDD;
+  outline: none;
+  height: 35px;
   margin-top: 10px;
 }
 
@@ -497,6 +508,7 @@ textarea {
   font-family: 'Roboto', sans-serif;
   height: 250px;
   margin-top: 10px;
+  resize: none;
 }
 
 input::placeholder {
@@ -511,7 +523,7 @@ button.add-preparo {
   font-weight: bold;
   color: #6558C3;
   display: inline-block;
-  margin: 5px 0 20px 0;
+  margin-bottom: 10px;
   background-color: #FFF;
   outline: none;
   cursor: pointer;
@@ -546,6 +558,11 @@ button[type="submit"]:hover {
   right: 180px;
   top: 60px;
   margin-right: 10px;
+}
+
+div#ingredients.item input,
+div#preparos.item input{
+  margin-bottom: 10px;
 }
 
 /*==========CHEFS MANAGER============*/

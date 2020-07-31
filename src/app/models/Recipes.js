@@ -22,9 +22,8 @@ module.exports = {
             ingredients,
             preparation,
             information,
-            author,
             created_at
-          ) VALUES ($1, $2, $3, $4, $5, $6, $7, $8)
+          ) VALUES ($1, $2, $3, $4, $5, $6, $7)
           RETURNING id
         `
 
@@ -54,9 +53,8 @@ module.exports = {
           title=($3),
           ingredients=($4),
           preparation=($5),
-          information=($6),
-          author=($7)
-          WHERE id = $8
+          information=($6)
+          WHERE id = $7
     `
     db.query(query, data, (err, results) => {
       if (err) throw `Erro no banco de dados! ${err}`;
@@ -70,6 +68,13 @@ module.exports = {
       if (err) throw `Erro no banco de dados! ${err}`;
 
       callback();
+    });
+  },
+  chefsSelectOptions(callback) {
+    db.query(`SELECT name, id FROM chefs`, (err, results) => {
+      if (err) throw `Erro no banco de dados! ${err}`;
+
+      callback(results.rows);
     });
   },
 }

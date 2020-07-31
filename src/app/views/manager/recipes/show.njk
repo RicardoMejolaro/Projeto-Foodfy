@@ -13,6 +13,10 @@
           <img src="/assets/logo-manager.png" alt="Logo foodfy">
         </a>
       </div>
+      <div class="links-manager">
+        <a href="/foodfy/admin/receitas">Receitas</a>
+        <a href="/foodfy/admin/chefs">Chefs</a>
+      </div>
     </div>
   </header>
 {% endblock %}
@@ -29,7 +33,7 @@
       <img src="{{recipe.image}}" alt="{{recipe.title}}">
       <div class="info-recipe-details">
         <span>{{recipe.title}}</span>
-        <p>{{recipe.author}}</p>
+        <p>{{recipe.chef_name}}</p>
       </div>
     </div>
 
