@@ -3,9 +3,12 @@ const db = require('../../config/db');
 module.exports = {
   all(callback) {
     db.query(`
-      SELECT * FROM recipes
-      ORDER BY recipes DESC`, (err, results) => {
-        if (err) throw `Erro no banco de dados! ${err}`;
+      SELECT recipes.*, chefs.name AS chef_name
+      FROM recipes
+      INNER JOIN chefs ON recipes.chef_id = chefs.id
+      ORDER BY recipes.id DESC
+      `, (err, results) => {
+      if (err) throw `Erro no banco de dados! ${err}`;
 
       callback(results.rows);
     });
@@ -31,9 +34,13 @@ module.exports = {
       callback(results.rows[0]);
 
     });
-  },  
+  },
   find(id, callback) {
-    db.query(`SELECT * FROM recipes where id = $1`, [id], (err, results) => {
+    db.query(`
+      SELECT recipes.*, chefs.name AS chef_name
+      FROM recipes
+      INNER JOIN chefs ON recipes.chef_id = chefs.id
+      WHERE recipes.id = $1`, [id], (err, results) => {
       if (err) throw `Erro no banco de dados! ${err}`;
 
       callback(results.rows[0]);
