@@ -28,7 +28,7 @@ module.exports = {
     });
   },  
   find(id, callback) {
-    db.query(`SELECT chefs.*, count(*) AS total_recipes
+    db.query(`SELECT chefs.*, count(recipes.*) AS total_recipes
     FROM chefs
     LEFT JOIN recipes ON (chefs.id = recipes.chef_id)
     WHERE chefs.id = $1
@@ -36,6 +36,16 @@ module.exports = {
       if (err) throw `Erro no banco de dados! ${err}`;
 
       callback(results.rows[0]);
+    });
+  },
+  findRecipesChef(id, callback) {
+    db.query(`SELECT chefs.id, recipes.*
+    FROM chefs
+    INNER JOIN recipes ON chefs.id = recipes.chef_id
+    WHERE chefs.id = $1`, [id], (err, results) => {
+      if (err) throw `Erro no banco de dados! ${err}`;
+
+      callback(results.rows);
     });
   },
   update(data, callback) {

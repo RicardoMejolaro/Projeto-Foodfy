@@ -36,7 +36,9 @@ module.exports = {
     Chefs.find(req.params.id, (chef) => {
       if (!chef) return res.send('Chef não localizado!');
 
-      return res.render('manager/chefs/show', { chef });
+      Chefs.findRecipesChef(req.params.id, (recipes) => {
+        return res.render('manager/chefs/show', { chef, recipes_chef: recipes });
+      });
     });   
   },
   edit(req, res) {
@@ -68,8 +70,14 @@ module.exports = {
     });
   },
   delete(req, res) {
-    Chefs.delete(req.body.id, () => {
-      return res.redirect('/foodfy/admin/chefs');
+    Chefs.find(req.body.id, (recipes) => {
+      if(recipes.total_recipes > 0) {
+        return res.send("Chef possui receitas cadastradas e não pode ser excluído!")
+      } else {
+        Chefs.delete(req.body.id, () => {
+          return res.redirect('/foodfy/admin/chefs');
+        });
+      }
     });
   }
 }

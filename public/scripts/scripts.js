@@ -64,8 +64,6 @@ if (formDelete) {
     const confirmation = confirm("Deseja realmente deletar?");
     if(!confirmation) {
       event.preventDefault();
-    } else {
-      alert("Registro deletado com sucesso!");
     }
   });
 }

@@ -41,13 +41,13 @@
   <div class="recipe">
     <h2>Receitas</h2>
     <div class="cards-chef">
-      {% for recipe in chefs.recipes_chef %}
+      {% for recipe in recipes_chef %}
       <div class="card-chef">
-        <img src="/assets/chef.png" alt="{{recipe.title}}">
+        <img src="{{recipe.image}}" alt="{{recipe.title}}">
         <div class="info-card-chef">
           <span>{{recipe.title}}</span>
-          <p>{{recipe.author}}</p>
-          <a href="/foodfy/admin/chef/{{ recipe.id }}">Visualizar</a>
+          <p>{{chef.name}}</p>
+          <a href="/foodfy/admin/receita/{{ recipe.id }}">Visualizar</a>
         </div>
       </div>
       {% endfor %}
