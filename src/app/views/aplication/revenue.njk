@@ -4,6 +4,28 @@
   <title>Foodfy - Receitas</title>
 {% endblock %}
 
+ {% block header %}
+    <header>
+      <div class="menu">
+        <div class="logo">
+          <a href="/foodfy">
+            <img src="/assets/logo.png" alt="Logo foodfy">
+          </a>
+        </div>
+        <div class="links">
+          <a href="/foodfy/sobre">Sobre</a>
+          <a href="/foodfy/receitas">Receitas</a>
+        </div>
+        <div class=filter>
+          <form action="/foodfy/search" method="GET">
+            <input type="text" name="filter" placeholder="Buscar receita" value="{{ filter }}">
+            <button type="submit">Filtrar</button>
+          </form>
+        </div>
+      </div>
+    </header>
+  {% endblock %}
+
 {% block content %}
   <div class="recipe-page">
     <div class="cards">

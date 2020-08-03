@@ -2,14 +2,14 @@ const Recipes = require('../models/Recipes');
 
 module.exports = {
   index(req, res) {
-    let recipes = [];
+      let recipes = [];
   
-    Recipes.all(function(recipesNew) {
-      for (let i = 0; i < 6; i++) { 
-        recipes.push(recipesNew[i])
-      }   
-      return res.render('aplication/index', { recipes });
-    });
+      Recipes.all(function(recipesNew) {
+        for (let i = 0; i < 6; i++) { 
+          recipes.push(recipesNew[i])
+        }   
+        return res.render('aplication/index', { recipes });
+      });
   },
   about(req, res) {
     return res.render('aplication/about');
@@ -27,5 +27,12 @@ module.exports = {
     });   
   
   },
+  search(req, res) {
+    const { filter } = req.query;
+
+      Recipes.findBy(filter, (recipes) => {
+          return res.render('aplication/search', {recipes, filter })
+      });
+  }
 }
 

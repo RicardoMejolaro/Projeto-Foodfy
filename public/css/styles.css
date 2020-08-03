@@ -18,7 +18,8 @@ header {
 }
 
 div.menu {
-  display: flex;
+  display: grid;
+  grid-template-columns: 92px 1fr 1fr;
   height: 70px;
   margin: 0 16%;
   position: relative;
@@ -26,28 +27,15 @@ div.menu {
 }
 
 div.links {  
-  margin-left: 80px;
+  margin-left: 20px;
 }
 
 div.links a {
   color: #111111;
   font-size: 18px;
   line-height: 26px;
-  margin: 16px;
+  margin: 5px;
   text-decoration: none;
-}
-
-div.admin a{
-  background-color: #FFF;
-  color: #111111;
-  font-weight: bold;
-  padding: 8px 16px;
-  border-radius: 8px;
-  position: absolute;
-  right: 0;
-  top: 20px;
-  text-decoration: none;
-  text-transform: uppercase;
 }
 
 div.links a:hover {
@@ -64,6 +52,43 @@ div.links a.active {
 div.links a.active:hover {
   opacity: 0.5;
 }
+
+/*=======FILTERS=========*/
+.filter{
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+}
+
+.filter form {
+  display: grid;
+  grid-template-columns: 1fr 120px;
+  align-items: center;
+  gap: 3px;
+}
+
+.filter form input {
+  border: 1px solid #eee;
+  box-sizing: border-box;
+  height: 37px;
+}
+
+.filter form button {
+  height: 37px;
+  text-align: center;
+  top: 17px;
+  margin: 0;
+}
+
+h2.h2-filter {
+  margin-top: 70px;
+  margin-bottom: -25px;
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: bold;
+}
+
+/*=====Index==========*/
 
 div.banner {
   background-color: #FBDFDB;
