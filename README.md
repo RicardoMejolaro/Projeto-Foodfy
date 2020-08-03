@@ -35,7 +35,7 @@ Criar também um administrador do site, contendo opções de, Cadastrar, Visuali
 ## Apresentação do Site
 
 <h1>
-<img src="public/assets/foodfy-site-com-db.gif" alt="Foodfy Site Gif">
+<img src="/public/assets/foodfy-site-com-db.gif" alt="Foodfy Site Gif">
 </h1>
 
 ---
@@ -43,7 +43,7 @@ Criar também um administrador do site, contendo opções de, Cadastrar, Visuali
 ## Apresentação do Gerenciador
 
 <h1>
-<img src="public/assets/foodfy-admin-com-db.gif" alt="Foodfy Site Admin Gif">
+<img src="/public/assets/foodfy-admin-com-db.gif" alt="Foodfy Site Admin Gif">
 </h1>
 
 ## Links
