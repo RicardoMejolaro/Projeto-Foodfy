@@ -111,6 +111,7 @@ const clickPreparo = document.querySelector(".add-preparo")
 if (clickPreparo) {
   clickPreparo.addEventListener("click", addPreparo);
 }
+
   
 
 

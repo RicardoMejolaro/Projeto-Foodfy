@@ -89,4 +89,26 @@ module.exports = {
       callback(results.rows);
     });
   },
+  paginate(params) {
+    const { limit, offset, callback } = params;
+
+    let query = "",
+
+        totalQuery = `(
+          SELECT count(*) FROM recipes
+          ) AS total`
+
+    query = `
+    SELECT recipes.*, ${totalQuery}, chefs.name AS chef_name
+    FROM recipes
+    LEFT JOIN chefs ON (recipes.chef_id = chefs.id)
+    ORDER BY recipes.id DESC
+    LIMIT $1 OFFSET $2`
+
+    db.query(query, [limit, offset], (err, results) => {
+      if(err) throw `Erro no banco de dados ${err}`
+
+      callback(results.rows);
+    });
+  }
 }

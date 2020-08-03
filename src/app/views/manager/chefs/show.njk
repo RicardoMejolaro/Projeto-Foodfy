@@ -33,7 +33,10 @@
       <img src="{{chef.avatar_url}}" alt="{{chef.name}}">
       <div class="info-chef-details">
         <span>{{chef.name}}</span>
-        <p>{{chef.total_recipes}} Receita(s)</p>
+        <p>{{chef.total_recipes}}
+            {% if chef.total_recipes <= 1 %} Receita{% endif %}
+            {% if chef.total_recipes > 1 %} Receitas{% endif %}
+        </p>
       </div>
     </div>
   </div>
