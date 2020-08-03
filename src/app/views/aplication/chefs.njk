@@ -1,0 +1,27 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+  <title>Foodfy - Gerenciador de Chefs</title>
+{% endblock %}
+
+{% block content %}
+
+  <div class="chef-manager">
+
+    <div class="cards-manager-chef">
+      {% for chef in chefs %}
+        <div class="card-manager-chef">
+          <img src="{{chef.avatar_url}}" alt="{{chef.name}}">
+          <div class="info-card-manager-chef">
+            <span>{{chef.name}}</span>
+            <p>{{chef.total_recipes}} 
+              {% if chef.total_recipes <= 1 %} receita{% endif %}
+              {% if chef.total_recipes > 1 %} receitas{% endif %}
+            </p>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+
+{% endblock %}

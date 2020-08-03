@@ -1,4 +1,5 @@
 const Recipes = require('../models/Recipes');
+const Chefs = require('../models/Chefs');
 
 module.exports = {
   index(req, res) {
@@ -33,6 +34,14 @@ module.exports = {
       Recipes.findBy(filter, (recipes) => {
           return res.render('aplication/search', {recipes, filter })
       });
-  }
+  },
+  chefs(req, res) {
+    Chefs.all(function(chefs) {
+
+       Chefs.find(req.params.id, (recipes) => {
+        return res.render('aplication/chefs', { chefs, recipes_chef: recipes });
+      });
+    });
+  },
 }
 

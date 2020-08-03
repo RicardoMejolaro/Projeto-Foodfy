@@ -13,7 +13,8 @@ routes.get('/foodfy', recipes.index);
 routes.get('/foodfy/sobre', recipes.about);
 routes.get('/foodfy/receitas', recipes.recipes);
 routes.get('/foodfy/receita/:id', recipes.recipe);
-routes.get('/foodfy/search/', recipes.search);
+routes.get('/foodfy/search', recipes.search);
+routes.get('/foodfy/chefs', recipes.chefs);
 
 //Rotas Administrador da aplicação - Receitas
 routes.get("/foodfy/admin/receitas", recipesManager.index); // Mostrar a lista de receitas
